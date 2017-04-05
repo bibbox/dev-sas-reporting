@@ -16,19 +16,19 @@
 		</RollingFile>
       </Appenders>
       <Loggers>
-        <Logger name="msig.toolbox.redcap.con.REDCapHttpConnector" level="all" additivity="false">
+        <Logger name="sasreporting.redcap.con.REDCapHttpConnector" level="all" additivity="false">
       		 <AppenderRef ref="Console"/>
       		 <AppenderRef ref="RollingFile" />
     	</Logger>
-    	<Logger name="msig.toolbox.redcap.jasper.REDCapJRXMLTemplateGenerator" level="all" additivity="false">
+    	<Logger name="sasreporting.redcap.jasper.REDCapJRXMLTemplateGenerator" level="all" additivity="false">
       		 <AppenderRef ref="Console"/>
       		 <AppenderRef ref="RollingFile" />
     	</Logger>
-    	<Logger name="msig.toolbox.redcap.jasper.REDCapJRXMLTemplateCompiler" level="all" additivity="false">
+    	<Logger name="sasreporting.redcap.jasper.REDCapJRXMLTemplateCompiler" level="all" additivity="false">
       		 <AppenderRef ref="Console"/>
       		 <AppenderRef ref="RollingFile" />
     	</Logger>
-    	<Logger name="msig.toolbox.redcap.mail.REDCapMailClient" level="all" additivity="false">
+    	<Logger name="sasreporting.redcap.mail.REDCapMailClient" level="all" additivity="false">
       		<AppenderRef ref="Console"/>
       		 <AppenderRef ref="RollingFile" />
     	</Logger>
