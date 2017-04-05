@@ -1,4 +1,4 @@
-package msig.toolbox.redcap.mail;
+package sasreporting.redcap.mail;
 
 import java.io.File;
 import java.io.FileInputStream;
