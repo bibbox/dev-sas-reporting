@@ -15,5 +15,7 @@ RUN ["mvn", "verify"]
 ADD src /code/src
 RUN ["mvn", "package"]
 
+ADD mail.properties target/mail.properties 
+
 EXPOSE 4567
 CMD ["/usr/lib/jvm/java-8-openjdk-amd64/bin/java", "-jar", "target/sasreporting-jar-with-dependencies.jar"]
