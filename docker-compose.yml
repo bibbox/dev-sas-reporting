@@ -1,0 +1,25 @@
+version: '2'
+
+networks:
+    bibbox-default-network:
+      external: true
+
+services:
+
+    dev-sas-reporting:
+        build: 
+            context: .
+        container_name: dev-sas-reporting
+        networks:
+            - bibbox-default-network
+        depends_on:
+            - dev-sas-reporting-datacontainer
+        volumes_from: 
+            - sdev-sas-reporting-datacontainer
+        restart: unless-stopped
+            
+    dev-sas-reporting-datacontainer
+        image: busybox
+        container_name: dev-sas-reporting-datacontainer
+        volumes:
+            - ./app:/app            
