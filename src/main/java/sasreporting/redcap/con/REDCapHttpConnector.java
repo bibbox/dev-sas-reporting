@@ -13,8 +13,12 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
+import org.apache.http.conn.ssl.TrustSelfSignedStrategy;
 import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.ssl.SSLContexts;
 import org.apache.http.util.EntityUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -221,7 +225,11 @@ public class REDCapHttpConnector {
 	
 	private HttpResponse getREDCapHttpResponse(ArrayList<NameValuePair> params) throws ClientProtocolException, IOException {
 		
-		HttpClient client = HttpClientBuilder.create().build();
+		HttpClient client = HttpClients.custom().setSSLSocketFactory(new SSLConnectionSocketFactory(SSLContexts.custom()
+				.loadTrustMaterial(null, new TrustSelfSignedStrategy())
+	            .build()
+	        )
+	    ).build();
 		HttpPost request = new HttpPost(this.url); 
 		
 		HttpResponse response;
