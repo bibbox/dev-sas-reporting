@@ -10,6 +10,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.security.KeyManagementException;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -178,10 +181,13 @@ public class REDCapSPARKService {
 	 * @throws IOException If a resource file (mail.txt, template.jrxml) is missing or not accessible 
 	 * @throws JRException If the report could not be generated 
 	 * @throws UnsupportedOperationException If a record stream cannot be read
+	 * @throws KeyStoreException 
+	 * @throws NoSuchAlgorithmException 
+	 * @throws KeyManagementException 
 	 *
 	 */
 	
-	public void sendMail(REDCapHttpConnector httpCon, String recordID, String to, String jrxmlTemplatePath, boolean ccEnabled) throws UnsupportedOperationException, IOException, JRException, EmailException {
+	public void sendMail(REDCapHttpConnector httpCon, String recordID, String to, String jrxmlTemplatePath, boolean ccEnabled) throws UnsupportedOperationException, IOException, JRException, EmailException, KeyManagementException, NoSuchAlgorithmException, KeyStoreException {
 		
 		InputStream record = httpCon.getRecordsFromREDCapProject(recordID, "", "csv");
 		
