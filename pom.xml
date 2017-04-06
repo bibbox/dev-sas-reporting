@@ -106,7 +106,7 @@
               </descriptorRefs>
               <archive>
                 <manifest>
-                  <mainClass>sasreporting.Hello</mainClass>
+                  <mainClass>sasreporting.redcap.spark.SPARKServiceMain</mainClass>
                 </manifest>
               </archive>
             </configuration>

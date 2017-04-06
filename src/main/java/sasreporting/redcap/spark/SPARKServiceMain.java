@@ -40,39 +40,9 @@ public class SPARKServiceMain {
 	
 	public static void main(String[] argv) {
 		
-		CommandLineParser parser = new DefaultParser();
-		
-		try {
-			
-			CommandLine cmd = parser.parse(options, argv);
-			
-			if(cmd.hasOption(FIELD_ACTION)) {
-				
-				if(FIELD_ACTION_START.equals(cmd.getOptionValue(FIELD_ACTION))) {
-					
-					REDCapSPARKService service = new REDCapSPARKService();
-					service.init();
-				}
-				
-				if(FIELD_ACTION_STOP.equals(cmd.getOptionValue(FIELD_ACTION))) {
-					
-					if(cmd.hasOption(FIELD_TOKEN_SHUTDOWN) && cmd.hasOption(FIELD_PORT)) {
-						
-						stopService(cmd.getOptionValue(FIELD_PORT), cmd.getOptionValue(FIELD_TOKEN_SHUTDOWN));
-					}
-					else {
-						
-						throw new Exception("Shutdown token or port is missing.");		
-					}
-				}
-			}
-		
-		} catch (Exception e) {
-			
-			e.printStackTrace();
-		}
-		
-	}
+		REDCapSPARKService service = new REDCapSPARKService();
+		service.init();
+    }
 	
 	/**
 	 * Stops the SPARK service
