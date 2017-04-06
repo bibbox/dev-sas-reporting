@@ -15,10 +15,10 @@ services:
         depends_on:
             - dev-sas-reporting-datacontainer
         volumes_from: 
-            - sdev-sas-reporting-datacontainer
+            - dev-sas-reporting-datacontainer
         restart: unless-stopped
             
-    dev-sas-reporting-datacontainer
+    dev-sas-reporting-datacontainer:
         image: busybox
         container_name: dev-sas-reporting-datacontainer
         volumes:
