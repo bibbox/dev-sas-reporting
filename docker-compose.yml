@@ -9,6 +9,8 @@ services:
     dev-sas-reporting:
         build: 
             context: .
+        ports:
+            - "4567:4567"
         container_name: dev-sas-reporting
         networks:
             - bibbox-default-network
