@@ -5,9 +5,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.security.KeyManagementException;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
 import org.apache.http.HttpResponse;
@@ -16,11 +13,8 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
-import org.apache.http.conn.ssl.TrustSelfSignedStrategy;
-import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.ssl.SSLContexts;
 import org.apache.http.util.EntityUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -52,7 +46,7 @@ public class REDCapHttpConnector {
 	
 	
 	public File writeMetadataFromREDCapProjectToFile(String exportFileFormat, String absolutePath)
-			throws IOException, UnsupportedOperationException, KeyManagementException, NoSuchAlgorithmException, KeyStoreException {
+			throws IOException, UnsupportedOperationException {
 			
 		String output = new StringBuffer(absolutePath).append(".").append(exportFileFormat).toString();
 			
@@ -76,7 +70,7 @@ public class REDCapHttpConnector {
 	}
 	
 	
-	public InputStream getInfoFromREDCapProject(String fields, String exportFormat) throws ClientProtocolException, IOException, KeyManagementException, NoSuchAlgorithmException, KeyStoreException {
+	public InputStream getInfoFromREDCapProject(String fields, String exportFormat) throws ClientProtocolException, IOException {
 		
 		ArrayList<NameValuePair> params = new ArrayList<NameValuePair>();
 		params.add(new BasicNameValuePair(FIELD_TOKEN, this.tokenID));
@@ -97,7 +91,7 @@ public class REDCapHttpConnector {
 	
 	
 	public InputStream getMetadataFromREDCapProject(String exportFormat)
-			throws IOException, UnsupportedOperationException, KeyManagementException, NoSuchAlgorithmException, KeyStoreException {
+			throws IOException, UnsupportedOperationException {
 			
 		ArrayList<NameValuePair> params = new ArrayList<NameValuePair>();
 		params.add(new BasicNameValuePair(FIELD_TOKEN, this.tokenID));
@@ -114,7 +108,7 @@ public class REDCapHttpConnector {
 	
 	
 	public File writeRecordsFromREDCapProjectToFile(String url, String tokenID, String recordIDs, String fields, String format, String absolutePath)
-			throws IOException, UnsupportedOperationException, KeyManagementException, NoSuchAlgorithmException, KeyStoreException {
+			throws IOException, UnsupportedOperationException {
 			
 		String output = new StringBuffer(absolutePath).append(".").append(format).toString();
 				
@@ -149,7 +143,7 @@ public class REDCapHttpConnector {
 	
 	
 	public InputStream getRecordsFromREDCapProject(String recordIDs, String fields, String format)
-			throws IOException, UnsupportedOperationException, KeyManagementException, NoSuchAlgorithmException, KeyStoreException {
+			throws IOException, UnsupportedOperationException {
 			
 		ArrayList<NameValuePair> params = new ArrayList<NameValuePair>();
 		params.add(new BasicNameValuePair(FIELD_TOKEN, this.tokenID));
@@ -179,7 +173,7 @@ public class REDCapHttpConnector {
 	
 	
 	public File writetUsersFromREDCapProjectToFile(String recordIDs, String fields, String format, String absolutePath)
-			throws IOException, UnsupportedOperationException, KeyManagementException, NoSuchAlgorithmException, KeyStoreException {
+			throws IOException, UnsupportedOperationException {
 			
 		String output = new StringBuffer(absolutePath).append(".").append(format).toString();
 				
@@ -203,7 +197,7 @@ public class REDCapHttpConnector {
 	
 	
 	public File writeParticipantsFromREDCapProjectToFile(String format, String absolutePath, String instrumentName)
-			throws IOException, UnsupportedOperationException, KeyManagementException, NoSuchAlgorithmException, KeyStoreException {
+			throws IOException, UnsupportedOperationException {
 			
 		String output = new StringBuffer(absolutePath).append(".").append(format).toString();
 				
@@ -225,13 +219,9 @@ public class REDCapHttpConnector {
 	}
 	
 	
-	private HttpResponse getREDCapHttpResponse(ArrayList<NameValuePair> params) throws ClientProtocolException, IOException, KeyManagementException, NoSuchAlgorithmException, KeyStoreException {
+	private HttpResponse getREDCapHttpResponse(ArrayList<NameValuePair> params) throws ClientProtocolException, IOException {
 		
-		HttpClient client = HttpClients.custom().setSSLSocketFactory(new SSLConnectionSocketFactory(SSLContexts.custom()
-				.loadTrustMaterial(null, new TrustSelfSignedStrategy())
-	            .build()
-	        )
-	    ).build();
+		HttpClient client = HttpClientBuilder.create().build();
 		HttpPost request = new HttpPost(this.url); 
 		
 		HttpResponse response;
