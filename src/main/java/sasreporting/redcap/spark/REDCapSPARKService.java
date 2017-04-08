@@ -38,8 +38,8 @@ public class REDCapSPARKService {
 	
 	private static final Logger logger = LogManager.getLogger(REDCapSPARKService.class);
 	
-	public static String PROPERTIES_FILE_MAIL = "mail.properties";
-	public static String PROPERTIES_FILE_REPORT_ALERT = "service.properties";
+	public static String PROPERTIES_FILE_MAIL = "/config/mail.properties";
+	public static String PROPERTIES_FILE_REPORT_ALERT = "/config/service.properties";
 	
 	public static String MAIL_TEXT_PATH = "mail.txt";
 	
