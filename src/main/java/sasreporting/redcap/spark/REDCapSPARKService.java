@@ -41,7 +41,7 @@ public class REDCapSPARKService {
 	public static String PROPERTIES_FILE_MAIL = "/config/mail.properties";
 	public static String PROPERTIES_FILE_REPORT_ALERT = "/config/service.properties";
 	
-	public static String MAIL_TEXT_PATH = "mail.txt";
+	public static String MAIL_TEXT_PATH = "/config/mail.txt";
 	
 	private static final String FIELD_PROJECT = "project_id";
 	private static final String FIELD_RECORD = "record";
@@ -161,7 +161,7 @@ public class REDCapSPARKService {
 				return true;
 			});
 		
-		} catch (IOException e) {
+		} catch (Exception e) {
 			
 			logger.error(e.getMessage());
 		}

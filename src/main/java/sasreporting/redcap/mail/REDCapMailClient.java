@@ -101,6 +101,8 @@ public class REDCapMailClient {
 			email.addCc(cc);
 		}
 		
+		logger.info("Validation finished");
+
 		email.setAuthentication(mailConf.getProperty(MAIL_USER), mailConf.getProperty(MAIL_PASSWORD));
 		email.setSubject(subject);
 		email.setTextMsg(message);
@@ -109,7 +111,7 @@ public class REDCapMailClient {
 		email.attach(new ByteArrayDataSource(attachment, "application/pdf"),
 				attachmentName + ".pdf", attachmentName,
 			       EmailAttachment.ATTACHMENT);
-		
+		logger.info("PDF attached, sending report");
 		String sent = email.send();
 		attachment.close();
 		
