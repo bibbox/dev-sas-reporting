@@ -21,7 +21,7 @@ public class REDCapMailClient {
 
 	private static final Logger logger = LogManager.getLogger(REDCapMailClient.class);
 	
-	public static String PROPERTIES_FILE = "mail.properties";
+	public static String PROPERTIES_FILE = "/config/mail.properties";
 	public static String MAIL_SERVER = "mail_server";
 	public static String MAIL_SENDER = "mail_sender";
 	public static String MAIL_USER = "mail_user";
