@@ -72,6 +72,7 @@ public class REDCapJRXMLTemplateCompiler {
 			for(int i=0; i<headerColumns.length; i++) {
 				
 				data[0][i]=csvRecord.get(i);
+				//System.out.println(headerColumns[i] + ": " + data[0][i].length());
 			}
 			
 			DefaultTableModel dtModel = new DefaultTableModel(data, headerColumns);
