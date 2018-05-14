@@ -51,9 +51,13 @@ public class REDCapSPARKService {
 	public static final String FIELD_SERVICE_PROJECTS = "project_file";
 	public static final String FIELD_SERVICE_TEMPLATE_DIR = "template_dir";
 	public static final String FIELD_SERVICE_MAIL = "mail_field";
+	public static final String FIELD_SERVICE_SEND = "send_field";
 	public static final String FIELD_SERVICE_CC = "cc_field";
 
 	public static final String REDCAP_FIELD_URL = "redcap_url";
+	
+	public static final String SUBMIT_INTERNAL = "Generate report for internal use";
+	public static final String SUBMIT_INTERNAL_ERIC = "Generate report and submit results to BBMRI-ERIC";
 	
 	private static Properties mailConf, serviceConf;
 	
@@ -129,33 +133,37 @@ public class REDCapSPARKService {
 					
 					if(mainInfRecords.size() > 0) {
 						
-						CSVRecord record = mainInfRecords.get(0);
+						CSVRecord record = mainInfRecords.get(0);			
+						
 						String to = record.get(csvpHeader.get(serviceConf.getProperty(REDCapSPARKService.FIELD_SERVICE_MAIL)));
 						
-						String ccEnabled = record.get(csvpHeader.get(serviceConf.getProperty(REDCapSPARKService.FIELD_SERVICE_CC)));
+						String ericSubmitField = record.get(csvpHeader.get(serviceConf.getProperty(REDCapSPARKService.FIELD_SERVICE_CC)));
 						
-						logger.info("Sending email to: " + to + " CC enabled: " + ccEnabled);
+						if(SUBMIT_INTERNAL.equals(ericSubmitField) || SUBMIT_INTERNAL_ERIC.equals(ericSubmitField)) {
 					
-						boolean enabled = false;
+							boolean ccEnabled = false;
 						
-						if("Yes".equals(ccEnabled)) {
+							if(SUBMIT_INTERNAL_ERIC.equals(ericSubmitField)) {
 							
-							enabled = true;
-						}
-								
-						if(to == null || "".equals(to)) {
+								ccEnabled = true;
+							}
 							
-							logger.info("No valid mail address");
-							halt(401, "No valid mail address");
+							logger.info("Sending email to: " + to + " CC enabled: " + ccEnabled);
+							
+							if(to == null || "".equals(to)) {
+							
+								logger.info("No valid mail address");
+								halt(401, "No valid mail address");
+							}
+						
+							logger.info("Project ID: " + projectIDs[i] + ", Record ID: " + recordIDs[i]);
+						
+							String jrxmlTemplatePath = serviceConf.getProperty(REDCapSPARKService.FIELD_SERVICE_TEMPLATE_DIR) + File.separator + projectTokenAndTemplate[1];
+						
+							logger.info("JRXML template path: " + jrxmlTemplatePath);
+						
+							sendMail(httpCon, recordIDs[i], to, jrxmlTemplatePath, ccEnabled);
 						}
-						
-						logger.info("Project ID: " + projectIDs[i] + ", Record ID: " + recordIDs[i]);
-						
-						String jrxmlTemplatePath = serviceConf.getProperty(REDCapSPARKService.FIELD_SERVICE_TEMPLATE_DIR)+File.separator+projectTokenAndTemplate[1];
-						
-						logger.info("JRXML template path: " + jrxmlTemplatePath);
-						
-						sendMail(httpCon, recordIDs[i], to, jrxmlTemplatePath, enabled);
 					}
 				}
 				return true;
