@@ -28,7 +28,7 @@ public class TemplateAndReportGeneratorTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		testGenerateJRXMLTemplates();
+		//testGenerateJRXMLTemplates();
 		testCompileJRXMLTemplates();	
 	}
 
@@ -38,7 +38,7 @@ public class TemplateAndReportGeneratorTest {
 		BufferedReader in;
 		try {
 			
-			in = new BufferedReader(new InputStreamReader(new FileInputStream("config/projects.csv")));
+			in = new BufferedReader(new InputStreamReader(new FileInputStream("dev-config/projects.csv")));
 			
 			CSVParser csvp = new CSVParser(in, CSVFormat.DEFAULT.withHeader());
 			
@@ -50,7 +50,6 @@ public class TemplateAndReportGeneratorTest {
 				String project = StringUtils.trim(record.get(headerMap.get("project")));
 				String token = StringUtils.trim(record.get(headerMap.get("token")));
 				testGenerateJRXMLTemplate(project, token);
-				System.out.println(project + " " + token);
 			}
 			
 			in.close();
@@ -70,17 +69,14 @@ public class TemplateAndReportGeneratorTest {
 		
 		try {
 			
+			InputStream projectInfo = httpCon.getInfoFromREDCapProject("project_title", "csv");
 			InputStream metadata = httpCon.getMetadataFromREDCapProject("csv");
 			
-			REDCapJRXMLTemplateGenerator jrxmlGenerator = new REDCapJRXMLTemplateGenerator(metadata);
-			
-		
+			REDCapJRXMLTemplateGenerator jrxmlGenerator = new REDCapJRXMLTemplateGenerator(projectInfo, metadata);
 			
 			JasperReport jr = jrxmlGenerator.generateREDCapRecordJRXMLTemplateWithBandPerElement();
 			
-			
-			
-			File jrxmlTemplateFile = jrxmlGenerator.writeJRXMLTemplateToFile(jr, "/config/templates/" + jrxmlTemplateName + ".jrxml");
+			File jrxmlTemplateFile = jrxmlGenerator.writeJRXMLTemplateToFile(jr, "dev-config/templates/" + jrxmlTemplateName + ".jrxml");
 			
 	
 			
@@ -99,7 +95,7 @@ public static void testCompileJRXMLTemplates() {
 		
 		try {
 			
-			in = new BufferedReader(new InputStreamReader(new FileInputStream("/config/projects.csv")));
+			in = new BufferedReader(new InputStreamReader(new FileInputStream("dev-config/projects.csv")));
 			
 			CSVParser csvp = new CSVParser(in, CSVFormat.DEFAULT.withHeader());
 			
@@ -111,7 +107,6 @@ public static void testCompileJRXMLTemplates() {
 				String project = StringUtils.trim(record.get(headerMap.get("project")));
 				String token = StringUtils.trim(record.get(headerMap.get("token")));
 				testCompileJRXMLTemplate(project, token);
-				System.out.println(project + " " + token);
 			}
 			
 			in.close();
@@ -133,18 +128,18 @@ public static void testCompileJRXMLTemplates() {
 		
 		try {
 			
-			record = httpCon.getRecordsFromREDCapProject("8", null, "csv");
+			record = httpCon.getRecordsFromREDCapProject("2", null, "csv");
 			
 		
 			REDCapJRXMLTemplateCompiler jrxmlCompiler = new REDCapJRXMLTemplateCompiler();
 			
-			File jrxmlTemplateFile = new File("/config/templates/" + jrxmlTemplateName + ".jrxml");
+			File jrxmlTemplateFile = new File("dev-config/templates/" + jrxmlTemplateName + ".jrxml");
 			
 		
 			JasperPrint redcapPrint = jrxmlCompiler.getReportFromJRXML(record, new FileInputStream(jrxmlTemplateFile));
 			
 			
-			jrxmlCompiler.exportJasperPrintToPDF(redcapPrint, "/config/reports/" + jrxmlTemplateName + ".pdf");
+			jrxmlCompiler.exportJasperPrintToPDF(redcapPrint, "dev-config/reports/" + jrxmlTemplateName + ".pdf");
 			
 			
 			jrxmlCompiler.showJasperViewer(redcapPrint);
