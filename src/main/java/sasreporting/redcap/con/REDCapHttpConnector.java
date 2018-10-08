@@ -178,7 +178,7 @@ public class REDCapHttpConnector {
 	}
 	
 	
-	public File writetUsersFromREDCapProjectToFile(String recordIDs, String fields, String format, String absolutePath)
+	public File writeUsersFromREDCapProjectToFile(String recordIDs, String fields, String format, String absolutePath)
 			throws IOException, UnsupportedOperationException, KeyManagementException, NoSuchAlgorithmException, KeyStoreException {
 			
 		String output = new StringBuffer(absolutePath).append(".").append(format).toString();

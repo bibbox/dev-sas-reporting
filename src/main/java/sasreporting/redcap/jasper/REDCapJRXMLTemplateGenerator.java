@@ -183,7 +183,7 @@ public class REDCapJRXMLTemplateGenerator {
 				jrdst.setPdfEmbedded(true);
 				jrdst.setPositionType(PositionTypeEnum.FLOAT);
 				jrdst.setFontSize(FONT_SIZE_SECTION_HEADER);
-				jrdst.setText(sectionHeader);
+				jrdst.setText(sectionHeader.replace("\n", "<br>"));
 				jrdst.setVerticalTextAlign(VerticalTextAlignEnum.MIDDLE);
 				jrdst.setWidth(jd.getPageWidth()-PAGE_MARGIN * 2);
 				int tfHeight = calculateTextFieldHeight(sectionHeader, jrdst.getWidth(),"DejaVuSerif", (int)FONT_SIZE_SECTION_HEADER)+HEADER_VERTICAL_SPACING;
@@ -202,7 +202,7 @@ public class REDCapJRXMLTemplateGenerator {
 					jrdl.setHeight(1);
 					jrdl.setX(PAGE_MARGIN);	
 					jrdl.setY(9);
-					jdbDetail.setHeight(SECTION_HEADER_HEIGHT+10);
+					jdbDetail.setHeight((tfHeight > SECTION_HEADER_HEIGHT+10) ? tfHeight : SECTION_HEADER_HEIGHT+10);
 					jdbDetail.addElement(jrdl);
 				}
 				jdbDetail = new JRDesignBand(); 
@@ -219,7 +219,7 @@ public class REDCapJRXMLTemplateGenerator {
 				jrdst.setFontSize(FONT_SIZE_TEXT_FIELDS);
 				jrdst.setPdfEmbedded(true);
 				jrdst.setPositionType(PositionTypeEnum.FLOAT);
-				jrdst.setText(fieldLabel);
+				jrdst.setText(fieldLabel.replace("\n", "<br>"));
 				
 				jrdst.setWidth(jd.getPageWidth() - PAGE_MARGIN * 2);
 				int tfHeight = calculateTextFieldHeight(fieldLabel, jrdst.getWidth(),"DejaVuSerif", (int)FONT_SIZE_TEXT_FIELDS)+DESCRIPTION_VERTICAL_SPACING;
@@ -261,7 +261,7 @@ public class REDCapJRXMLTemplateGenerator {
 				
 				JRDesignStaticText jrdst = new JRDesignStaticText();
 				jrdst.setMarkup(FIELD_MARKUP_HTML);
-				jrdst.setText(fieldLabel);
+				jrdst.setText(fieldLabel.replace("\n", "<br>"));
 				jrdst.setVerticalTextAlign(VerticalTextAlignEnum.TOP);
 				jrdst.setFontSize(FONT_SIZE_TEXT_FIELDS);
 				jrdst.setWidth((jd.getPageWidth() - PAGE_MARGIN * 2) / 2);
@@ -470,20 +470,16 @@ public class REDCapJRXMLTemplateGenerator {
 				
 					if(FIELD_TYPE_RADIO.equals(fieldType)) {
 					
-						int maxLineWidth = jrdst.getWidth() - PAGE_MARGIN * 2;
-						int sumWidth = 0; 
+						int maxLineWidth = jrdst.getWidth() - PAGE_MARGIN * 2- RADIO_BUTTON_SIZE - TEXT_BUTTON_SPACING;
 						int bandHeight = 0;
 						int y = 0;
 					
 						for(String fieldchoiceElement : fieldSelectChoicesElements) {
 							
-							int fieldSelectChoicesElementWidth = calculateTextFieldWidth(fieldchoiceElement, "DejaVuSerif", (int)FONT_SIZE_TEXT_FIELDS);
-							int height = calculateTextFieldHeight(fieldchoiceElement, (jd.getPageWidth() - PAGE_MARGIN * 2) / 2, "DejaVuSerif", (int)FONT_SIZE_TEXT_FIELDS); 
+							int fieldSelectChoicesElementWidth = Math.min(calculateTextFieldWidth(fieldchoiceElement, "DejaVuSerif", (int)FONT_SIZE_TEXT_FIELDS), maxLineWidth);
+							int height = calculateTextFieldHeight(fieldchoiceElement, maxLineWidth, "DejaVuSerif", (int)FONT_SIZE_TEXT_FIELDS); 
 						
 							bandHeight = bandHeight + height;
-						
-							fieldSelectChoicesElementWidth = 
-								(fieldSelectChoicesElementWidth > (maxLineWidth - RADIO_BUTTON_SIZE)) ? (maxLineWidth - RADIO_BUTTON_SIZE) : fieldSelectChoicesElementWidth;
 								
 							JRDesignStaticText jrdstFieldSelectChoice = new JRDesignStaticText();
 							jrdstFieldSelectChoice.setMarkup(FIELD_MARKUP_HTML);
@@ -495,8 +491,6 @@ public class REDCapJRXMLTemplateGenerator {
 							jrdstFieldSelectChoice.setX(xr+RADIO_BUTTON_SIZE+TEXT_BUTTON_SPACING);
 							jrdstFieldSelectChoice.setHeight(height);
 							jrdstFieldSelectChoice.setY(y);
-						
-							sumWidth = sumWidth + fieldSelectChoicesElementWidth;
 						
 							JRDesignImage jrdiUnchecked = new JRDesignImage(new JRDesignStyle().getDefaultStyleProvider());
 							JRDesignExpression jrdiexUnchecked = new JRDesignExpression();
@@ -563,7 +557,7 @@ public class REDCapJRXMLTemplateGenerator {
 		jrdstfLeft.setFontSize(FONT_SIZE_FOOTER_FIELDS);
 		jrdstfLeft.setForecolor(Color.decode("#004280"));
 		String documentTitle = "BBMRI-ERIC SAS for CEN/TS 16835-1:2015";
-		String versionNumber = "v02, "+creationTime;
+		String versionNumber = "v02, 2018-06-29";
 		String createdBy = "Sabrina Neururer, BBMRI.at";
 		String approvedBy = "Andrea Wutte, BBMRI-ERIC";	
 		String footerText = "&emsp;Document title: "+documentTitle
@@ -739,9 +733,16 @@ public class REDCapJRXMLTemplateGenerator {
 		
 		FontMetrics fm = img.getGraphics().getFontMetrics(defaultFont);
 		
-		double w = Math.ceil((double)fm.stringWidth(Jsoup.clean(text,wl))/width);
+		String[] textLines = text.split("\r\n|\r|\n");
 		
-		int height  = (int)(w) * fm.getHeight();
+		int height = 0;
+		
+		for(String textLine: textLines) {
+			
+			double w = (textLine.length()==0) ? 1.0 : Math.ceil((double)fm.stringWidth(Jsoup.clean(textLine,wl))/width);
+			
+			height += (int)(w) * fm.getHeight();
+		}
 		
 		return height;
 	}
