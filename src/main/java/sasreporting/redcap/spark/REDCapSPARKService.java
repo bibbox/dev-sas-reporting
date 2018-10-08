@@ -41,15 +41,15 @@ public class REDCapSPARKService {
 	public static String PROPERTIES_FILE_MAIL = "/config/mail.properties";
 	public static String PROPERTIES_FILE_REPORT_ALERT = "/config/service.properties";
 	
-	public static String MAIL_TEXT_PATH = "/config/mail.txt";
-	
 	private static final String FIELD_PROJECT = "project_id";
 	private static final String FIELD_RECORD = "record";
 	
 	public static final String FIELD_PROJECTS_TEMPLATE = "template";
+	public static final String FIELD_PROJECTS_MAIL = "mail";
 	
 	public static final String FIELD_SERVICE_PROJECTS = "project_file";
 	public static final String FIELD_SERVICE_TEMPLATE_DIR = "template_dir";
+	public static final String FIELD_SERVICE_MAIL_DIR = "mail_dir";
 	public static final String FIELD_SERVICE_MAIL = "mail_field";
 	public static final String FIELD_SERVICE_SEND = "send_field";
 	public static final String FIELD_SERVICE_CC = "cc_field";
@@ -160,9 +160,13 @@ public class REDCapSPARKService {
 						
 							String jrxmlTemplatePath = serviceConf.getProperty(REDCapSPARKService.FIELD_SERVICE_TEMPLATE_DIR) + File.separator + projectTokenAndTemplate[1];
 						
+							String mailPath = serviceConf.getProperty(REDCapSPARKService.FIELD_SERVICE_MAIL_DIR) + File.separator + projectTokenAndTemplate[2];
+							
 							logger.info("JRXML template path: " + jrxmlTemplatePath);
 						
-							sendMail(httpCon, recordIDs[i], to, jrxmlTemplatePath, ccEnabled);
+							logger.info("Mail path: " + mailPath);
+							
+							sendMail(httpCon, recordIDs[i], to, jrxmlTemplatePath, mailPath, ccEnabled);
 						}
 					}
 				}
@@ -195,7 +199,7 @@ public class REDCapSPARKService {
 	 *
 	 */
 	
-	public void sendMail(REDCapHttpConnector httpCon, String recordID, String to, String jrxmlTemplatePath, boolean ccEnabled) throws UnsupportedOperationException, IOException, JRException, EmailException, KeyManagementException, NoSuchAlgorithmException, KeyStoreException {
+	public void sendMail(REDCapHttpConnector httpCon, String recordID, String to, String jrxmlTemplatePath, String mailPath, boolean ccEnabled) throws UnsupportedOperationException, IOException, JRException, EmailException, KeyManagementException, NoSuchAlgorithmException, KeyStoreException {
 		
 		InputStream record = httpCon.getRecordsFromREDCapProject(recordID, "", "csv");
 		
@@ -220,7 +224,7 @@ public class REDCapSPARKService {
 		
 		REDCapMailClient mailClient = new REDCapMailClient();
 		
-		String sent = mailClient.sendMailWithREDCapRecordAttachement(to, cc, new ByteArrayInputStream(JasperExportManager.exportReportToPdf(jp)), reportName, "REDCAP Report Event Mail", readMailText());
+		String sent = mailClient.sendMailWithREDCapRecordAttachement(to, cc, new ByteArrayInputStream(JasperExportManager.exportReportToPdf(jp)), reportName, "REDCAP Report Event Mail", readMailText(mailPath));
 		
 		logger.info(sent);
 		
@@ -250,9 +254,10 @@ public class REDCapSPARKService {
 			
 			if(projectID.equals(project.get(csvpHeader.get(REDCapSPARKService.FIELD_PROJECT)))) {
 				
-				String[] tokenAndTemplate = new String[2];
+				String[] tokenAndTemplate = new String[3];
 				tokenAndTemplate[0] = project.get(csvpHeader.get(REDCapHttpConnector.FIELD_TOKEN));
 				tokenAndTemplate[1] = project.get(csvpHeader.get(REDCapSPARKService.FIELD_PROJECTS_TEMPLATE));
+				tokenAndTemplate[2] = project.get(csvpHeader.get(REDCapSPARKService.FIELD_PROJECTS_MAIL));
 				
 				return tokenAndTemplate;
 			}
@@ -266,9 +271,9 @@ public class REDCapSPARKService {
 	 * @throws IOException If the mail.txt file cannot be accessed
 	 */
 	
-	private String readMailText() throws IOException {
+	private String readMailText(String path) throws IOException {
 		
-		File file = new File(REDCapSPARKService.MAIL_TEXT_PATH);
+		File file = new File(path);
 		FileInputStream fis = new FileInputStream(file);
 		byte[] data = new byte[(int) file.length()];
 		fis.read(data);
