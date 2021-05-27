@@ -26,10 +26,12 @@ import net.sf.jasperreports.engine.JasperReport;
 
 public class TemplateAndReportGeneratorTest {
 
+	private static String api_url = "https://heap.bibbox.org/api/";
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//testGenerateJRXMLTemplates();
-		testCompileJRXMLTemplates();	
+		testGenerateJRXMLTemplates();
+		//testCompileJRXMLTemplates();
 	}
 
 	
@@ -65,7 +67,7 @@ public class TemplateAndReportGeneratorTest {
 	public static void testGenerateJRXMLTemplate(String jrxmlTemplateName, String token) {
 		
 		REDCapHttpConnector httpCon 
-		= new REDCapHttpConnector("https://sas.bbmri-eric.eu/api/", token);
+		= new REDCapHttpConnector(api_url, token);
 		
 		try {
 			
@@ -122,7 +124,7 @@ public static void testCompileJRXMLTemplates() {
 	public static void testCompileJRXMLTemplate(String jrxmlTemplateName, String token) {
 		
 		REDCapHttpConnector httpCon 
-		= new REDCapHttpConnector("https://sas.bbmri-eric.eu/api/", token);
+		= new REDCapHttpConnector(api_url, token);
 		
 		InputStream record;
 		
