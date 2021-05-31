@@ -38,8 +38,8 @@ public class REDCapSPARKService {
 	
 	private static final Logger logger = LogManager.getLogger(REDCapSPARKService.class);
 	
-	public static String PROPERTIES_FILE_MAIL = "/config/mail.properties";
-	public static String PROPERTIES_FILE_REPORT_ALERT = "/config/service.properties";
+	public static String PROPERTIES_FILE_MAIL = "config/mail.properties";
+	public static String PROPERTIES_FILE_REPORT_ALERT = "config/service.properties";
 	
 	private static final String FIELD_PROJECT = "project_id";
 	private static final String FIELD_RECORD = "record";
@@ -88,16 +88,6 @@ public class REDCapSPARKService {
 			before((request, response) -> {
 			    
 				Map<String, String[]> queryMap = request.queryMap().toMap();
-
-				logger.info("Map Parameters: ");
-
-				for(String key : queryMap.keySet()) {
-					for(String value : queryMap.get(key)) {
-						logger.info(key + ": " + value);
-					}
-				}
-
-				logger.info("Map Parameters done");
 				
 				String url = serviceConf.getProperty(REDCapHttpConnector.FIELD_URL); 
 				
