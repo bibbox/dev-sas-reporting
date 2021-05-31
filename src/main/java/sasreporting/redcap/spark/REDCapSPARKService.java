@@ -88,6 +88,16 @@ public class REDCapSPARKService {
 			before((request, response) -> {
 			    
 				Map<String, String[]> queryMap = request.queryMap().toMap();
+
+				logger.info("Map Parameters: ");
+
+				for(String key : queryMap.keySet()) {
+					for(String value : queryMap.get(key)) {
+						logger.info(key + ": " + value);
+					}
+				}
+
+				logger.info("Map Parameters done");
 				
 				String url = serviceConf.getProperty(REDCapHttpConnector.FIELD_URL); 
 				
@@ -107,8 +117,10 @@ public class REDCapSPARKService {
 			
 				Map<String, String[]> queryMap = request.queryMap().toMap();
 				
-				String url = serviceConf.getProperty(REDCapHttpConnector.FIELD_URL); 
-				
+				String url = serviceConf.getProperty(REDCapHttpConnector.FIELD_URL);
+
+
+
 				logger.info("REDCap Url: " + queryMap.get(REDCapSPARKService.REDCAP_FIELD_URL)[0]);
 				
 				String[] projectIDs = queryMap.get(REDCapSPARKService.FIELD_PROJECT);
