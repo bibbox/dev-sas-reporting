@@ -89,9 +89,7 @@ public class REDCapSPARKService {
 			    
 				Map<String, String[]> queryMap = request.queryMap().toMap();
 				
-				String url = serviceConf.getProperty(REDCapHttpConnector.FIELD_URL); 
-				
-				logger.info(url + " not a valid service");
+				String url = serviceConf.getProperty(REDCapHttpConnector.FIELD_URL);
 				
 				boolean authenticated = (queryMap.get(REDCapSPARKService.REDCAP_FIELD_URL) != null && url.startsWith(queryMap.get(REDCapSPARKService.REDCAP_FIELD_URL)[0]));
 				
