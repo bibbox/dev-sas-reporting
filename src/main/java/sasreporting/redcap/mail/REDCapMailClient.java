@@ -21,7 +21,7 @@ public class REDCapMailClient {
 
 	private static final Logger logger = LogManager.getLogger(REDCapMailClient.class);
 	
-	public static String PROPERTIES_FILE = "/config/mail.properties";
+	public static String PROPERTIES_FILE = "config/mail.properties";
 	public static String MAIL_SERVER = "mail_server";
 	public static String MAIL_PORT_SSL = "mail_port_ssl";
 	public static String MAIL_SENDER = "mail_sender";
@@ -107,6 +107,11 @@ public class REDCapMailClient {
 		email.setSubject(subject);
 		email.setTextMsg(message);
 		email.setSSL(Boolean.parseBoolean(mailConf.getProperty(MAIL_SSL)));
+		email.setSslSmtpPort(mailConf.getProperty(MAIL_PORT_SSL));
+		email.setSmtpPort(Integer.parseInt(mailConf.getProperty(MAIL_PORT_SSL)));
+
+		email.setTLS(Boolean.parseBoolean(mailConf.getProperty(MAIL_TLS)));
+		email.setDebug(false);
 		email.setCharset(mailConf.getProperty(MAIL_CHARSET));
 		email.attach(new ByteArrayDataSource(attachment, "application/pdf"),
 				attachmentName + ".pdf", attachmentName,

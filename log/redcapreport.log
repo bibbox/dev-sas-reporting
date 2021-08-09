@@ -1,0 +1,793 @@
+27/May/2021 15:53:18,348- REDCapHttpConnector: Getting record input stream...
+27/May/2021 15:53:19,391- REDCapHttpConnector: Getting metadata input stream ...
+27/May/2021 15:55:07,021- REDCapHttpConnector: Getting record input stream...
+27/May/2021 15:55:07,705- REDCapHttpConnector: Getting metadata input stream ...
+27/May/2021 15:55:08,719- REDCapJRXMLTemplateGenerator: JRXML template generated
+27/May/2021 15:55:08,759- REDCapJRXMLTemplateGenerator: JRXML template file written to: dev-config/templates/Self-Assessment-Tool.jrxml
+31/May/2021 10:37:57,375- REDCapSPARKService: Starting REDCap listener
+31/May/2021 10:37:57,379- REDCapSPARKService: /config/mail.properties (No such file or directory)
+31/May/2021 10:38:50,141- REDCapSPARKService: Starting REDCap listener
+31/May/2021 10:38:50,147- REDCapSPARKService: /config/mail.properties (No such file or directory)
+31/May/2021 10:40:31,963- REDCapSPARKService: Starting REDCap listener
+31/May/2021 10:51:08,276- REDCapSPARKService: Map Parameters: 
+31/May/2021 10:51:08,276- REDCapSPARKService: project_id: 15
+31/May/2021 10:51:08,276- REDCapSPARKService: selfassessmenttool_complete: 2
+31/May/2021 10:51:08,276- REDCapSPARKService: record: 2
+31/May/2021 10:51:08,276- REDCapSPARKService: project_url: https://heap.bibbox.org/redcap_v10.8.4/index.php?pid=15
+31/May/2021 10:51:08,276- REDCapSPARKService: instrument: selfassessmenttool
+31/May/2021 10:51:08,277- REDCapSPARKService: redcap_url: https://heap.bibbox.org/
+31/May/2021 10:51:08,277- REDCapSPARKService: username: reihsr
+31/May/2021 10:51:08,277- REDCapSPARKService: Map Parameters done
+31/May/2021 10:51:08,277- REDCapSPARKService: https://sas.bbmri-eric.eu/api/ not a valid service
+01/Jun/2021 10:00:29,463- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 10:11:10,923- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 10:13:05,783- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 10:13:32,067- REDCapSPARKService: Incoming event:
+
+01/Jun/2021 10:13:38,645- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+01/Jun/2021 10:14:00,084- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 10:14:03,852- REDCapSPARKService: Incoming event:
+
+01/Jun/2021 10:14:03,852- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+01/Jun/2021 10:14:39,332- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 10:14:55,735- REDCapSPARKService: Incoming event:
+
+01/Jun/2021 10:15:15,889- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+01/Jun/2021 10:16:54,779- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 10:17:01,247- REDCapSPARKService: Incoming event:
+
+01/Jun/2021 10:17:02,421- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+01/Jun/2021 10:18:52,919- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 10:18:58,278- REDCapSPARKService: Incoming event:
+
+01/Jun/2021 10:18:59,660- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+01/Jun/2021 10:19:33,471- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 10:22:55,304- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 10:23:06,351- REDCapSPARKService: Incoming event:
+
+01/Jun/2021 10:23:07,311- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+01/Jun/2021 10:23:14,676- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 10:23:38,780- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+01/Jun/2021 10:23:46,981- REDCapSPARKService: Project ID: 15, Record ID: 2
+01/Jun/2021 10:24:01,665- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+01/Jun/2021 10:24:03,183- REDCapSPARKService: Mail path: config/mails/mail.txt
+01/Jun/2021 10:24:06,111- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 10:24:33,833- REDCapSPARKService: CC Address: backoffice.bibbox@gmail.com
+01/Jun/2021 10:26:09,344- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 10:26:12,071- REDCapSPARKService: Incoming event:
+
+01/Jun/2021 10:26:12,071- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+01/Jun/2021 10:26:12,079- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 10:26:12,747- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+01/Jun/2021 10:26:12,747- REDCapSPARKService: Project ID: 15, Record ID: 2
+01/Jun/2021 10:26:12,748- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+01/Jun/2021 10:26:12,748- REDCapSPARKService: Mail path: config/mails/mail.txt
+01/Jun/2021 10:26:12,748- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 10:26:15,375- REDCapSPARKService: CC Address: backoffice.bibbox@gmail.com
+01/Jun/2021 10:26:15,375- REDCapSPARKService: /config/mail.properties (No such file or directory)
+01/Jun/2021 10:48:08,532- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 10:48:11,837- REDCapSPARKService: Incoming event:
+
+01/Jun/2021 10:48:11,837- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+01/Jun/2021 10:48:11,843- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 10:48:12,464- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+01/Jun/2021 10:48:12,464- REDCapSPARKService: Project ID: 15, Record ID: 2
+01/Jun/2021 10:48:12,465- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+01/Jun/2021 10:48:12,465- REDCapSPARKService: Mail path: config/mails/mail.txt
+01/Jun/2021 10:48:12,465- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 10:48:14,963- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+01/Jun/2021 10:48:15,361- REDCapMailClient: Validation finished
+01/Jun/2021 10:48:15,370- REDCapMailClient: PDF attached, sending report
+01/Jun/2021 10:50:25,551- REDCapSPARKService: Sending the email to the following server failed : smtp.office365.com:25
+01/Jun/2021 10:53:03,064- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 10:58:02,578- REDCapSPARKService: Incoming event:
+
+01/Jun/2021 10:58:02,578- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+01/Jun/2021 10:58:05,783- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 10:58:06,670- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+01/Jun/2021 10:58:06,670- REDCapSPARKService: Project ID: 15, Record ID: 2
+01/Jun/2021 10:58:06,670- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+01/Jun/2021 10:58:06,670- REDCapSPARKService: Mail path: config/mails/mail.txt
+01/Jun/2021 10:58:06,670- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 10:58:09,407- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+01/Jun/2021 10:58:09,872- REDCapMailClient: Validation finished
+01/Jun/2021 10:58:09,886- REDCapMailClient: PDF attached, sending report
+01/Jun/2021 10:59:25,120- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 10:59:28,869- REDCapSPARKService: Incoming event:
+
+01/Jun/2021 10:59:28,870- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+01/Jun/2021 10:59:28,879- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 10:59:29,545- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+01/Jun/2021 10:59:29,545- REDCapSPARKService: Project ID: 15, Record ID: 2
+01/Jun/2021 10:59:29,545- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+01/Jun/2021 10:59:29,546- REDCapSPARKService: Mail path: config/mails/mail.txt
+01/Jun/2021 10:59:29,546- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 10:59:32,401- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+01/Jun/2021 11:03:44,723- REDCapMailClient: Validation finished
+01/Jun/2021 11:03:44,755- REDCapMailClient: PDF attached, sending report
+01/Jun/2021 11:03:48,546- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 11:04:51,294- REDCapSPARKService: Incoming event:
+
+01/Jun/2021 11:04:51,294- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+01/Jun/2021 11:04:51,301- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 11:04:51,923- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+01/Jun/2021 11:04:51,924- REDCapSPARKService: Project ID: 15, Record ID: 2
+01/Jun/2021 11:04:51,924- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+01/Jun/2021 11:04:51,924- REDCapSPARKService: Mail path: config/mails/mail.txt
+01/Jun/2021 11:04:51,924- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 11:04:54,428- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+01/Jun/2021 11:04:54,838- REDCapMailClient: Validation finished
+01/Jun/2021 11:04:54,848- REDCapMailClient: PDF attached, sending report
+01/Jun/2021 11:04:54,894- REDCapSPARKService: Sending the email to the following server failed : smtp.office365.com:25
+01/Jun/2021 11:05:07,616- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 11:05:13,858- REDCapSPARKService: Incoming event:
+
+01/Jun/2021 11:05:13,858- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+01/Jun/2021 11:05:13,868- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 11:05:15,265- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+01/Jun/2021 11:05:15,265- REDCapSPARKService: Project ID: 15, Record ID: 2
+01/Jun/2021 11:05:15,265- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+01/Jun/2021 11:05:15,265- REDCapSPARKService: Mail path: config/mails/mail.txt
+01/Jun/2021 11:05:15,265- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 11:05:18,860- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+01/Jun/2021 11:06:18,843- REDCapMailClient: Validation finished
+01/Jun/2021 11:07:35,967- REDCapMailClient: PDF attached, sending report
+01/Jun/2021 11:08:18,632- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 11:08:21,296- REDCapSPARKService: Incoming event:
+
+01/Jun/2021 11:08:21,296- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+01/Jun/2021 11:08:21,303- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 11:08:22,010- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+01/Jun/2021 11:08:22,010- REDCapSPARKService: Project ID: 15, Record ID: 2
+01/Jun/2021 11:08:22,011- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+01/Jun/2021 11:08:22,011- REDCapSPARKService: Mail path: config/mails/mail.txt
+01/Jun/2021 11:08:22,011- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 11:08:24,453- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+01/Jun/2021 11:08:24,839- REDCapMailClient: Validation finished
+01/Jun/2021 11:08:24,848- REDCapMailClient: PDF attached, sending report
+01/Jun/2021 11:08:24,889- REDCapSPARKService: Sending the email to the following server failed : smtp.office365.com:587
+01/Jun/2021 11:10:22,646- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 11:10:24,993- REDCapSPARKService: Incoming event:
+
+01/Jun/2021 11:10:24,994- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+01/Jun/2021 11:10:25,001- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 11:10:25,602- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+01/Jun/2021 11:10:25,602- REDCapSPARKService: Project ID: 15, Record ID: 2
+01/Jun/2021 11:10:25,603- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+01/Jun/2021 11:10:25,603- REDCapSPARKService: Mail path: config/mails/mail.txt
+01/Jun/2021 11:10:25,603- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 11:10:28,479- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+01/Jun/2021 11:10:28,857- REDCapMailClient: Validation finished
+01/Jun/2021 11:10:28,865- REDCapMailClient: PDF attached, sending report
+01/Jun/2021 11:10:28,902- REDCapMailClient: error
+01/Jun/2021 11:10:28,902- REDCapMailClient: Sending the email to the following server failed : smtp.office365.com:587
+01/Jun/2021 11:10:28,902- REDCapMailClient: PDF report sent to: robert.reihs@medunigraz.at
+01/Jun/2021 11:10:28,902- REDCapSPARKService: error
+01/Jun/2021 11:14:50,655- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 11:14:59,011- REDCapSPARKService: Incoming event:
+
+01/Jun/2021 11:14:59,012- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+01/Jun/2021 11:14:59,019- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 11:14:59,638- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+01/Jun/2021 11:14:59,638- REDCapSPARKService: Project ID: 15, Record ID: 2
+01/Jun/2021 11:14:59,639- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+01/Jun/2021 11:14:59,639- REDCapSPARKService: Mail path: config/mails/mail.txt
+01/Jun/2021 11:14:59,639- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 11:15:02,306- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+01/Jun/2021 11:15:02,668- REDCapMailClient: Validation finished
+01/Jun/2021 11:15:02,677- REDCapMailClient: PDF attached, sending report
+01/Jun/2021 11:15:02,723- REDCapMailClient: error
+01/Jun/2021 11:15:02,723- REDCapMailClient: Sending the email to the following server failed : smtp.office365.com:587
+01/Jun/2021 11:15:02,723- REDCapMailClient: PDF report sent to: robert.reihs@medunigraz.at
+01/Jun/2021 11:15:02,723- REDCapSPARKService: error
+01/Jun/2021 11:19:04,615- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 11:19:07,412- REDCapSPARKService: Incoming event:
+
+01/Jun/2021 11:19:07,412- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+01/Jun/2021 11:19:07,419- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 11:19:08,110- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+01/Jun/2021 11:19:08,111- REDCapSPARKService: Project ID: 15, Record ID: 2
+01/Jun/2021 11:19:08,111- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+01/Jun/2021 11:19:08,111- REDCapSPARKService: Mail path: config/mails/mail.txt
+01/Jun/2021 11:19:08,112- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 11:19:10,801- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+01/Jun/2021 11:19:11,238- REDCapMailClient: Validation finished
+01/Jun/2021 11:19:11,249- REDCapMailClient: PDF attached, sending report
+01/Jun/2021 11:19:11,297- REDCapSPARKService: Sending the email to the following server failed : smtp.office365.com:587
+01/Jun/2021 11:22:11,143- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 11:22:16,964- REDCapSPARKService: Incoming event:
+
+01/Jun/2021 11:22:16,965- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+01/Jun/2021 11:22:16,973- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 11:22:17,707- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+01/Jun/2021 11:22:17,707- REDCapSPARKService: Project ID: 15, Record ID: 2
+01/Jun/2021 11:22:17,707- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+01/Jun/2021 11:22:17,707- REDCapSPARKService: Mail path: config/mails/mail.txt
+01/Jun/2021 11:22:17,707- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 11:22:20,336- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+01/Jun/2021 11:22:31,575- REDCapMailClient: Validation finished
+01/Jun/2021 11:22:54,980- REDCapMailClient: PDF attached, sending report
+01/Jun/2021 11:25:11,664- REDCapSPARKService: Sending the email to the following server failed : smtp.office365.com:587
+01/Jun/2021 11:27:53,905- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 11:27:56,202- REDCapSPARKService: Incoming event:
+
+01/Jun/2021 11:27:56,202- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+01/Jun/2021 11:27:56,212- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 11:27:56,808- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+01/Jun/2021 11:27:56,808- REDCapSPARKService: Project ID: 15, Record ID: 2
+01/Jun/2021 11:27:56,809- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+01/Jun/2021 11:27:56,809- REDCapSPARKService: Mail path: config/mails/mail.txt
+01/Jun/2021 11:27:56,809- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 11:27:59,245- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+01/Jun/2021 11:27:59,607- REDCapMailClient: Validation finished
+01/Jun/2021 11:27:59,616- REDCapMailClient: PDF attached, sending report
+01/Jun/2021 11:28:01,677- REDCapMailClient: PDF report sent to: robert.reihs@medunigraz.at
+01/Jun/2021 11:28:01,677- REDCapSPARKService: <1581521836.1.1622539679630.JavaMail.reihsr@reihsr-XPS-15-9560>
+01/Jun/2021 17:15:30,400- REDCapSPARKService: Incoming event:
+
+01/Jun/2021 17:15:30,401- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+01/Jun/2021 17:15:30,402- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 17:15:30,685- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+01/Jun/2021 17:15:30,685- REDCapSPARKService: Project ID: 15, Record ID: 2
+01/Jun/2021 17:15:30,685- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+01/Jun/2021 17:15:30,685- REDCapSPARKService: Mail path: config/mails/mail.txt
+01/Jun/2021 17:15:30,685- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 17:15:31,728- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+01/Jun/2021 17:15:31,848- REDCapMailClient: Validation finished
+01/Jun/2021 17:15:31,849- REDCapMailClient: PDF attached, sending report
+01/Jun/2021 17:15:34,401- REDCapMailClient: PDF report sent to: robert.reihs@medunigraz.at
+01/Jun/2021 17:15:34,402- REDCapSPARKService: <1790652468.3.1622560531853.JavaMail.reihsr@reihsr-XPS-15-9560>
+01/Jun/2021 17:16:52,048- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 17:16:52,052- REDCapSPARKService: /config/mail.properties (No such file or directory)
+01/Jun/2021 17:17:00,755- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 17:17:00,760- REDCapSPARKService: /config/mail.properties (No such file or directory)
+01/Jun/2021 17:17:13,510- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 17:17:16,106- REDCapSPARKService: Incoming event:
+
+01/Jun/2021 17:17:16,107- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+01/Jun/2021 17:17:16,114- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 17:17:16,827- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+01/Jun/2021 17:17:16,827- REDCapSPARKService: Project ID: 15, Record ID: 2
+01/Jun/2021 17:17:16,827- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+01/Jun/2021 17:17:16,828- REDCapSPARKService: Mail path: config/mails/mail.txt
+01/Jun/2021 17:17:16,828- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 17:17:19,825- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+01/Jun/2021 17:17:20,307- REDCapMailClient: Validation finished
+01/Jun/2021 17:17:20,317- REDCapMailClient: PDF attached, sending report
+01/Jun/2021 17:17:21,971- REDCapMailClient: PDF report sent to: robert.reihs@medunigraz.at
+01/Jun/2021 17:17:21,971- REDCapSPARKService: <1518028094.1.1622560640335.JavaMail.reihsr@reihsr-XPS-15-9560>
+01/Jun/2021 17:22:02,270- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 17:24:03,616- REDCapSPARKService: Starting REDCap listener
+01/Jun/2021 17:24:08,846- REDCapSPARKService: Incoming event:
+
+01/Jun/2021 17:24:08,846- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+01/Jun/2021 17:24:08,854- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 17:24:09,531- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+01/Jun/2021 17:24:09,532- REDCapSPARKService: Project ID: 15, Record ID: 2
+01/Jun/2021 17:24:09,532- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+01/Jun/2021 17:24:09,532- REDCapSPARKService: Mail path: config/mails/mail.txt
+01/Jun/2021 17:24:09,533- REDCapHttpConnector: Getting record input stream...
+01/Jun/2021 17:24:11,961- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+01/Jun/2021 17:24:12,358- REDCapMailClient: Validation finished
+01/Jun/2021 17:24:12,370- REDCapMailClient: PDF attached, sending report
+01/Jun/2021 17:24:13,984- REDCapMailClient: PDF report sent to: robert.reihs@medunigraz.at
+01/Jun/2021 17:24:13,985- REDCapSPARKService: <1240981835.1.1622561052386.JavaMail.reihsr@reihsr-XPS-15-9560>
+02/Jun/2021 09:04:32,371- REDCapSPARKService: Starting REDCap listener
+02/Jun/2021 09:04:40,451- REDCapSPARKService: Incoming event:
+
+02/Jun/2021 09:04:40,451- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+02/Jun/2021 09:04:40,460- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:04:41,245- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+02/Jun/2021 09:04:41,246- REDCapSPARKService: Project ID: 15, Record ID: 2
+02/Jun/2021 09:04:41,246- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+02/Jun/2021 09:04:41,246- REDCapSPARKService: Mail path: config/mails/mail.txt
+02/Jun/2021 09:04:41,246- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:04:44,043- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+02/Jun/2021 09:04:44,528- REDCapMailClient: Validation finished
+02/Jun/2021 09:04:44,538- REDCapMailClient: PDF attached, sending report
+02/Jun/2021 09:04:46,867- REDCapMailClient: PDF report sent to: robert.reihs@medunigraz.at
+02/Jun/2021 09:04:46,867- REDCapSPARKService: <2094855576.1.1622617484554.JavaMail.reihsr@reihsr-XPS-15-9560>
+02/Jun/2021 09:06:40,814- REDCapSPARKService: Starting REDCap listener
+02/Jun/2021 09:06:45,010- REDCapSPARKService: Incoming event:
+
+02/Jun/2021 09:06:45,010- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+02/Jun/2021 09:06:45,017- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:06:45,697- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+02/Jun/2021 09:06:45,697- REDCapSPARKService: Project ID: 15, Record ID: 2
+02/Jun/2021 09:06:45,698- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+02/Jun/2021 09:06:45,698- REDCapSPARKService: Mail path: config/mails/mail.txt
+02/Jun/2021 09:06:45,698- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:06:46,248- REDCapSPARKService: org.xml.sax.SAXParseException; lineNumber: 72; columnNumber: 42; cvc-complex-type.3.2.2: Attribute 'textAdjust' is not allowed to appear in element 'textField'.
+02/Jun/2021 09:09:33,035- REDCapSPARKService: Incoming event:
+
+02/Jun/2021 09:09:33,035- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+02/Jun/2021 09:09:33,035- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:09:33,366- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+02/Jun/2021 09:09:33,366- REDCapSPARKService: Project ID: 15, Record ID: 2
+02/Jun/2021 09:09:33,366- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+02/Jun/2021 09:09:33,366- REDCapSPARKService: Mail path: config/mails/mail.txt
+02/Jun/2021 09:09:33,366- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:09:33,662- REDCapSPARKService: org.xml.sax.SAXParseException; lineNumber: 72; columnNumber: 42; cvc-complex-type.3.2.2: Attribute 'textAdjust' is not allowed to appear in element 'textField'.
+02/Jun/2021 09:11:20,229- REDCapSPARKService: Starting REDCap listener
+02/Jun/2021 09:11:31,444- REDCapSPARKService: Incoming event:
+
+02/Jun/2021 09:11:31,445- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+02/Jun/2021 09:11:31,451- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:11:32,111- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+02/Jun/2021 09:11:32,111- REDCapSPARKService: Project ID: 15, Record ID: 2
+02/Jun/2021 09:11:32,112- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+02/Jun/2021 09:11:32,112- REDCapSPARKService: Mail path: config/mails/mail.txt
+02/Jun/2021 09:11:32,112- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:11:32,732- REDCapSPARKService: org.xml.sax.SAXParseException; lineNumber: 72; columnNumber: 42; cvc-complex-type.3.2.2: Attribute 'textAdjust' is not allowed to appear in element 'textField'.
+02/Jun/2021 09:12:37,586- REDCapSPARKService: Starting REDCap listener
+02/Jun/2021 09:12:49,747- REDCapSPARKService: Incoming event:
+
+02/Jun/2021 09:12:49,747- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+02/Jun/2021 09:12:49,754- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:12:50,361- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+02/Jun/2021 09:12:50,362- REDCapSPARKService: Project ID: 15, Record ID: 2
+02/Jun/2021 09:12:50,362- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+02/Jun/2021 09:12:50,362- REDCapSPARKService: Mail path: config/mails/mail.txt
+02/Jun/2021 09:12:50,362- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:12:51,001- REDCapSPARKService: org.xml.sax.SAXParseException; lineNumber: 72; columnNumber: 42; cvc-complex-type.3.2.2: Attribute 'textAdjust' is not allowed to appear in element 'textField'.
+02/Jun/2021 09:14:31,036- REDCapSPARKService: Starting REDCap listener
+02/Jun/2021 09:14:37,297- REDCapSPARKService: Incoming event:
+
+02/Jun/2021 09:14:37,298- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+02/Jun/2021 09:14:37,304- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:14:37,882- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+02/Jun/2021 09:14:37,882- REDCapSPARKService: Project ID: 15, Record ID: 2
+02/Jun/2021 09:14:37,882- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+02/Jun/2021 09:14:37,883- REDCapSPARKService: Mail path: config/mails/mail.txt
+02/Jun/2021 09:14:37,883- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:14:38,760- REDCapSPARKService: org.xml.sax.SAXParseException; lineNumber: 4111; columnNumber: 43; cvc-complex-type.3.2.2: Attribute 'textAdjust' is not allowed to appear in element 'textField'.
+02/Jun/2021 09:15:32,728- REDCapSPARKService: Starting REDCap listener
+02/Jun/2021 09:15:34,665- REDCapSPARKService: Incoming event:
+
+02/Jun/2021 09:15:34,665- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+02/Jun/2021 09:15:34,672- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:15:35,347- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+02/Jun/2021 09:15:35,348- REDCapSPARKService: Project ID: 15, Record ID: 2
+02/Jun/2021 09:15:35,348- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+02/Jun/2021 09:15:35,349- REDCapSPARKService: Mail path: config/mails/mail.txt
+02/Jun/2021 09:15:35,349- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:15:36,805- REDCapSPARKService: Errors were encountered when compiling report expressions class file:
+1. Indicators.Reusable cannot be resolved to a type
+                value = Indicators for Reusable; //$JR_EXPR_ID=11$
+                        <--------------------->
+2. Syntax error on token "for", . expected
+                value = Indicators for Reusable; //$JR_EXPR_ID=11$
+                                   <->
+3. Indicators.Interoperable cannot be resolved to a type
+                value = Indicators for Interoperable; //$JR_EXPR_ID=12$
+                        <-------------------------->
+4. Syntax error on token "for", . expected
+                value = Indicators for Interoperable; //$JR_EXPR_ID=12$
+                                   <->
+5. Indicators.Findable cannot be resolved to a type
+                value = Indicators for Findable; //$JR_EXPR_ID=13$
+                        <--------------------->
+6. Syntax error on token "for", . expected
+                value = Indicators for Findable; //$JR_EXPR_ID=13$
+                                   <->
+7. Indicators.Accessible cannot be resolved to a type
+                value = Indicators for Accessible; //$JR_EXPR_ID=14$
+                        <----------------------->
+8. Syntax error on token "for", . expected
+                value = Indicators for Accessible; //$JR_EXPR_ID=14$
+                                   <->
+9. Indicators.Reusable cannot be resolved to a type
+                value = Indicators for Reusable; //$JR_EXPR_ID=11$
+                        <--------------------->
+10. Syntax error on token "for", . expected
+                value = Indicators for Reusable; //$JR_EXPR_ID=11$
+                                   <->
+11. Indicators.Interoperable cannot be resolved to a type
+                value = Indicators for Interoperable; //$JR_EXPR_ID=12$
+                        <-------------------------->
+12. Syntax error on token "for", . expected
+                value = Indicators for Interoperable; //$JR_EXPR_ID=12$
+                                   <->
+13. Indicators.Findable cannot be resolved to a type
+                value = Indicators for Findable; //$JR_EXPR_ID=13$
+                        <--------------------->
+14. Syntax error on token "for", . expected
+                value = Indicators for Findable; //$JR_EXPR_ID=13$
+                                   <->
+15. Indicators.Accessible cannot be resolved to a type
+                value = Indicators for Accessible; //$JR_EXPR_ID=14$
+                        <----------------------->
+16. Syntax error on token "for", . expected
+                value = Indicators for Accessible; //$JR_EXPR_ID=14$
+                                   <->
+17. Indicators.Reusable cannot be resolved to a type
+                value = Indicators for Reusable; //$JR_EXPR_ID=11$
+                        <--------------------->
+18. Syntax error on token "for", . expected
+                value = Indicators for Reusable; //$JR_EXPR_ID=11$
+                                   <->
+19. Indicators.Interoperable cannot be resolved to a type
+                value = Indicators for Interoperable; //$JR_EXPR_ID=12$
+                        <-------------------------->
+20. Syntax error on token "for", . expected
+                value = Indicators for Interoperable; //$JR_EXPR_ID=12$
+                                   <->
+21. Indicators.Findable cannot be resolved to a type
+                value = Indicators for Findable; //$JR_EXPR_ID=13$
+                        <--------------------->
+22. Syntax error on token "for", . expected
+                value = Indicators for Findable; //$JR_EXPR_ID=13$
+                                   <->
+23. Indicators.Accessible cannot be resolved to a type
+                value = Indicators for Accessible; //$JR_EXPR_ID=14$
+                        <----------------------->
+24. Syntax error on token "for", . expected
+                value = Indicators for Accessible; //$JR_EXPR_ID=14$
+                                   <->
+24 errors
+.
+02/Jun/2021 09:18:25,901- REDCapSPARKService: Starting REDCap listener
+02/Jun/2021 09:18:29,471- REDCapSPARKService: Incoming event:
+
+02/Jun/2021 09:18:29,471- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+02/Jun/2021 09:18:29,478- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:18:30,092- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+02/Jun/2021 09:18:30,092- REDCapSPARKService: Project ID: 15, Record ID: 2
+02/Jun/2021 09:18:30,093- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+02/Jun/2021 09:18:30,093- REDCapSPARKService: Mail path: config/mails/mail.txt
+02/Jun/2021 09:18:30,093- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:18:32,247- REDCapSPARKService: Could not create chart customizer instance.
+02/Jun/2021 09:40:01,229- REDCapSPARKService: Incoming event:
+
+02/Jun/2021 09:40:01,229- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+02/Jun/2021 09:40:01,229- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:40:01,506- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+02/Jun/2021 09:40:01,507- REDCapSPARKService: Project ID: 15, Record ID: 2
+02/Jun/2021 09:40:01,507- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+02/Jun/2021 09:40:01,507- REDCapSPARKService: Mail path: config/mails/mail.txt
+02/Jun/2021 09:40:01,507- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:40:02,536- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+02/Jun/2021 09:40:02,893- REDCapMailClient: Validation finished
+02/Jun/2021 09:40:02,902- REDCapMailClient: PDF attached, sending report
+02/Jun/2021 09:40:04,538- REDCapMailClient: PDF report sent to: robert.reihs@medunigraz.at
+02/Jun/2021 09:40:04,538- REDCapSPARKService: <2133219395.1.1622619602917.JavaMail.reihsr@reihsr-XPS-15-9560>
+02/Jun/2021 09:41:38,787- REDCapSPARKService: Incoming event:
+
+02/Jun/2021 09:41:38,787- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+02/Jun/2021 09:41:38,788- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:41:39,091- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+02/Jun/2021 09:41:39,091- REDCapSPARKService: Project ID: 15, Record ID: 2
+02/Jun/2021 09:41:39,091- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+02/Jun/2021 09:41:39,091- REDCapSPARKService: Mail path: config/mails/mail.txt
+02/Jun/2021 09:41:39,091- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:41:39,872- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+02/Jun/2021 09:41:40,001- REDCapMailClient: Validation finished
+02/Jun/2021 09:41:40,002- REDCapMailClient: PDF attached, sending report
+02/Jun/2021 09:41:41,215- REDCapMailClient: PDF report sent to: robert.reihs@medunigraz.at
+02/Jun/2021 09:41:41,215- REDCapSPARKService: <939629514.3.1622619700005.JavaMail.reihsr@reihsr-XPS-15-9560>
+02/Jun/2021 09:47:14,091- REDCapSPARKService: Incoming event:
+
+02/Jun/2021 09:47:14,092- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+02/Jun/2021 09:47:14,092- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:47:14,344- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+02/Jun/2021 09:47:14,344- REDCapSPARKService: Project ID: 15, Record ID: 2
+02/Jun/2021 09:47:14,344- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+02/Jun/2021 09:47:14,344- REDCapSPARKService: Mail path: config/mails/mail.txt
+02/Jun/2021 09:47:14,344- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:47:14,861- REDCapSPARKService: Errors were encountered when compiling report expressions class file:
+1. The method LTRIM(String) is undefined for the type Self45Assessment45Tool_1622620034734_712931
+                value = LTRIM("Indicators for Findable") ); //$JR_EXPR_ID=11$
+                        <--->
+2. Syntax error on token ")", delete this token
+                value = LTRIM("Indicators for Findable") ); //$JR_EXPR_ID=11$
+                                                         ^
+3. The method LTRIM(String) is undefined for the type Self45Assessment45Tool_1622620034734_712931
+                value = LTRIM("Indicators for Findable") ); //$JR_EXPR_ID=11$
+                        <--->
+4. Syntax error on token ")", delete this token
+                value = LTRIM("Indicators for Findable") ); //$JR_EXPR_ID=11$
+                                                         ^
+5. The method LTRIM(String) is undefined for the type Self45Assessment45Tool_1622620034734_712931
+                value = LTRIM("Indicators for Findable") ); //$JR_EXPR_ID=11$
+                        <--->
+6. Syntax error on token ")", delete this token
+                value = LTRIM("Indicators for Findable") ); //$JR_EXPR_ID=11$
+                                                         ^
+6 errors
+.
+02/Jun/2021 09:48:08,110- REDCapSPARKService: Incoming event:
+
+02/Jun/2021 09:48:08,110- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+02/Jun/2021 09:48:08,111- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:48:08,355- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+02/Jun/2021 09:48:08,355- REDCapSPARKService: Project ID: 15, Record ID: 2
+02/Jun/2021 09:48:08,355- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+02/Jun/2021 09:48:08,355- REDCapSPARKService: Mail path: config/mails/mail.txt
+02/Jun/2021 09:48:08,355- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:48:08,886- REDCapSPARKService: Errors were encountered when compiling report expressions class file:
+1. The method LTRIM(String) is undefined for the type Self45Assessment45Tool_1622620088827_748846
+                value = LTRIM("Indicators for Findable"); //$JR_EXPR_ID=11$
+                        <--->
+2. The method LTRIM(String) is undefined for the type Self45Assessment45Tool_1622620088827_748846
+                value = LTRIM("Indicators for Findable"); //$JR_EXPR_ID=11$
+                        <--->
+3. The method LTRIM(String) is undefined for the type Self45Assessment45Tool_1622620088827_748846
+                value = LTRIM("Indicators for Findable"); //$JR_EXPR_ID=11$
+                        <--->
+3 errors
+.
+02/Jun/2021 09:48:42,840- REDCapSPARKService: Incoming event:
+
+02/Jun/2021 09:48:42,841- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+02/Jun/2021 09:48:42,841- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:48:43,125- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+02/Jun/2021 09:48:43,125- REDCapSPARKService: Project ID: 15, Record ID: 2
+02/Jun/2021 09:48:43,125- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+02/Jun/2021 09:48:43,125- REDCapSPARKService: Mail path: config/mails/mail.txt
+02/Jun/2021 09:48:43,125- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:48:43,797- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+02/Jun/2021 09:48:43,874- REDCapMailClient: Validation finished
+02/Jun/2021 09:48:43,874- REDCapMailClient: PDF attached, sending report
+02/Jun/2021 09:48:45,395- REDCapMailClient: PDF report sent to: robert.reihs@medunigraz.at
+02/Jun/2021 09:48:45,395- REDCapSPARKService: <1434633655.5.1622620123876.JavaMail.reihsr@reihsr-XPS-15-9560>
+02/Jun/2021 09:49:28,044- REDCapSPARKService: Incoming event:
+
+02/Jun/2021 09:49:28,044- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+02/Jun/2021 09:49:28,044- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:49:28,270- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+02/Jun/2021 09:49:28,271- REDCapSPARKService: Project ID: 15, Record ID: 2
+02/Jun/2021 09:49:28,271- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+02/Jun/2021 09:49:28,271- REDCapSPARKService: Mail path: config/mails/mail.txt
+02/Jun/2021 09:49:28,271- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:49:28,681- REDCapSPARKService: Errors were encountered when compiling report expressions class file:
+1. Indicators.Findable cannot be resolved to a type
+                value = Indicators for Findable; //$JR_EXPR_ID=11$
+                        <--------------------->
+2. Syntax error on token "for", . expected
+                value = Indicators for Findable; //$JR_EXPR_ID=11$
+                                   <->
+3. Indicators.Findable cannot be resolved to a type
+                value = Indicators for Findable; //$JR_EXPR_ID=11$
+                        <--------------------->
+4. Syntax error on token "for", . expected
+                value = Indicators for Findable; //$JR_EXPR_ID=11$
+                                   <->
+5. Indicators.Findable cannot be resolved to a type
+                value = Indicators for Findable; //$JR_EXPR_ID=11$
+                        <--------------------->
+6. Syntax error on token "for", . expected
+                value = Indicators for Findable; //$JR_EXPR_ID=11$
+                                   <->
+6 errors
+.
+02/Jun/2021 09:49:47,653- REDCapSPARKService: Incoming event:
+
+02/Jun/2021 09:49:47,653- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+02/Jun/2021 09:49:47,653- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:49:47,906- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+02/Jun/2021 09:49:47,906- REDCapSPARKService: Project ID: 15, Record ID: 2
+02/Jun/2021 09:49:47,906- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+02/Jun/2021 09:49:47,906- REDCapSPARKService: Mail path: config/mails/mail.txt
+02/Jun/2021 09:49:47,907- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:49:48,101- REDCapSPARKService: org.xml.sax.SAXParseException; lineNumber: 106; columnNumber: 15; cvc-complex-type.2.4.a: Invalid content was found starting with element 'title'. One of '{"http://jasperreports.sourceforge.net/jasperreports":font, "http://jasperreports.sourceforge.net/jasperreports":titleExpression}' is expected.
+02/Jun/2021 09:50:05,479- REDCapSPARKService: Incoming event:
+
+02/Jun/2021 09:50:05,479- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+02/Jun/2021 09:50:05,479- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:50:06,006- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+02/Jun/2021 09:50:06,006- REDCapSPARKService: Project ID: 15, Record ID: 2
+02/Jun/2021 09:50:06,007- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+02/Jun/2021 09:50:06,007- REDCapSPARKService: Mail path: config/mails/mail.txt
+02/Jun/2021 09:50:06,007- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:50:06,201- REDCapSPARKService: org.xml.sax.SAXParseException; lineNumber: 106; columnNumber: 19; cvc-complex-type.2.4.a: Invalid content was found starting with element 'titleText'. One of '{"http://jasperreports.sourceforge.net/jasperreports":font, "http://jasperreports.sourceforge.net/jasperreports":titleExpression}' is expected.
+02/Jun/2021 09:50:22,163- REDCapSPARKService: Incoming event:
+
+02/Jun/2021 09:50:22,164- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+02/Jun/2021 09:50:22,164- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:50:22,351- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+02/Jun/2021 09:50:22,352- REDCapSPARKService: Project ID: 15, Record ID: 2
+02/Jun/2021 09:50:22,352- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+02/Jun/2021 09:50:22,352- REDCapSPARKService: Mail path: config/mails/mail.txt
+02/Jun/2021 09:50:22,353- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:50:22,927- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+02/Jun/2021 09:50:22,972- REDCapMailClient: Validation finished
+02/Jun/2021 09:50:22,973- REDCapMailClient: PDF attached, sending report
+02/Jun/2021 09:50:24,177- REDCapMailClient: PDF report sent to: robert.reihs@medunigraz.at
+02/Jun/2021 09:50:24,178- REDCapSPARKService: <193710635.7.1622620222975.JavaMail.reihsr@reihsr-XPS-15-9560>
+02/Jun/2021 09:54:21,827- REDCapSPARKService: Incoming event:
+
+02/Jun/2021 09:54:21,828- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+02/Jun/2021 09:54:21,828- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:54:22,862- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+02/Jun/2021 09:54:22,863- REDCapSPARKService: Project ID: 15, Record ID: 2
+02/Jun/2021 09:54:22,863- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+02/Jun/2021 09:54:22,863- REDCapSPARKService: Mail path: config/mails/mail.txt
+02/Jun/2021 09:54:22,864- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 09:54:24,026- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+02/Jun/2021 09:54:24,070- REDCapMailClient: Validation finished
+02/Jun/2021 09:54:24,071- REDCapMailClient: PDF attached, sending report
+02/Jun/2021 09:54:25,215- REDCapMailClient: PDF report sent to: robert.reihs@medunigraz.at
+02/Jun/2021 09:54:25,215- REDCapSPARKService: <1686284860.9.1622620464073.JavaMail.reihsr@reihsr-XPS-15-9560>
+02/Jun/2021 10:58:41,703- REDCapSPARKService: Incoming event:
+
+02/Jun/2021 10:58:41,703- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+02/Jun/2021 10:58:41,703- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 10:58:42,092- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+02/Jun/2021 10:58:42,092- REDCapSPARKService: Project ID: 15, Record ID: 2
+02/Jun/2021 10:58:42,092- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+02/Jun/2021 10:58:42,093- REDCapSPARKService: Mail path: config/mails/mail.txt
+02/Jun/2021 10:58:42,093- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 10:58:42,598- REDCapSPARKService: java.lang.Integer cannot be cast to java.lang.Double
+02/Jun/2021 11:01:00,362- REDCapSPARKService: Incoming event:
+
+02/Jun/2021 11:01:00,362- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+02/Jun/2021 11:01:00,362- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 11:01:00,552- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+02/Jun/2021 11:01:00,552- REDCapSPARKService: Project ID: 15, Record ID: 2
+02/Jun/2021 11:01:00,552- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+02/Jun/2021 11:01:00,552- REDCapSPARKService: Mail path: config/mails/mail.txt
+02/Jun/2021 11:01:00,552- REDCapHttpConnector: Getting record input stream...
+02/Jun/2021 11:01:01,357- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+02/Jun/2021 11:01:01,416- REDCapMailClient: Validation finished
+02/Jun/2021 11:01:01,416- REDCapMailClient: PDF attached, sending report
+02/Jun/2021 11:01:02,701- REDCapMailClient: PDF report sent to: robert.reihs@medunigraz.at
+02/Jun/2021 11:01:02,701- REDCapSPARKService: <1258414627.11.1622624461419.JavaMail.reihsr@reihsr-XPS-15-9560>
+07/Jun/2021 12:09:05,567- REDCapSPARKService: Starting REDCap listener
+07/Jun/2021 12:09:39,023- REDCapSPARKService: Incoming event:
+
+07/Jun/2021 12:09:39,023- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+07/Jun/2021 12:09:39,034- REDCapHttpConnector: Getting record input stream...
+07/Jun/2021 12:09:40,433- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+07/Jun/2021 12:09:40,433- REDCapSPARKService: Project ID: 15, Record ID: 2
+07/Jun/2021 12:09:40,433- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+07/Jun/2021 12:09:40,434- REDCapSPARKService: Mail path: config/mails/mail.txt
+07/Jun/2021 12:09:40,434- REDCapHttpConnector: Getting record input stream...
+07/Jun/2021 12:09:43,867- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+07/Jun/2021 12:09:44,482- REDCapMailClient: Validation finished
+07/Jun/2021 12:09:44,491- REDCapMailClient: PDF attached, sending report
+07/Jun/2021 12:09:45,876- REDCapMailClient: PDF report sent to: robert.reihs@medunigraz.at
+07/Jun/2021 12:09:45,876- REDCapSPARKService: <300057833.1.1623060584509.JavaMail.reihsr@reihsr-XPS-15-9560>
+10/Jun/2021 11:31:18,031- REDCapSPARKService: Starting REDCap listener
+10/Jun/2021 11:44:02,493- REDCapSPARKService: Incoming event:
+
+10/Jun/2021 11:44:02,493- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+10/Jun/2021 11:44:02,503- REDCapHttpConnector: Getting record input stream...
+10/Jun/2021 11:46:13,214- REDCapSPARKService: Connect to heap.bibbox.org:443 [heap.bibbox.org/212.232.25.224] failed: Connection timed out (Connection timed out)
+17/Jun/2021 13:48:14,512- REDCapSPARKService: Starting REDCap listener
+17/Jun/2021 13:48:50,572- REDCapSPARKService: Incoming event:
+
+17/Jun/2021 13:48:50,572- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+17/Jun/2021 13:48:50,581- REDCapHttpConnector: Getting record input stream...
+17/Jun/2021 13:48:51,997- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+17/Jun/2021 13:48:51,997- REDCapSPARKService: Project ID: 15, Record ID: 2
+17/Jun/2021 13:48:51,997- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+17/Jun/2021 13:48:51,997- REDCapSPARKService: Mail path: config/mails/mail.txt
+17/Jun/2021 13:48:51,997- REDCapHttpConnector: Getting record input stream...
+17/Jun/2021 13:48:55,074- REDCapSPARKService: java.lang.String cannot be cast to java.lang.Number
+17/Jun/2021 13:50:58,053- REDCapSPARKService: Incoming event:
+
+17/Jun/2021 13:50:58,053- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+17/Jun/2021 13:50:58,054- REDCapHttpConnector: Getting record input stream...
+17/Jun/2021 13:50:58,466- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+17/Jun/2021 13:50:58,466- REDCapSPARKService: Project ID: 15, Record ID: 2
+17/Jun/2021 13:50:58,466- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+17/Jun/2021 13:50:58,467- REDCapSPARKService: Mail path: config/mails/mail.txt
+17/Jun/2021 13:50:58,467- REDCapHttpConnector: Getting record input stream...
+17/Jun/2021 13:50:59,460- REDCapSPARKService: java.lang.String cannot be cast to java.lang.Number
+17/Jun/2021 13:51:33,378- REDCapSPARKService: Incoming event:
+
+17/Jun/2021 13:51:33,378- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+17/Jun/2021 13:51:33,378- REDCapHttpConnector: Getting record input stream...
+17/Jun/2021 13:51:33,682- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+17/Jun/2021 13:51:33,682- REDCapSPARKService: Project ID: 15, Record ID: 2
+17/Jun/2021 13:51:33,682- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+17/Jun/2021 13:51:33,682- REDCapSPARKService: Mail path: config/mails/mail.txt
+17/Jun/2021 13:51:33,682- REDCapHttpConnector: Getting record input stream...
+17/Jun/2021 13:51:34,251- REDCapSPARKService: Errors were encountered when compiling report expressions class file:
+1. Cannot cast from String to int
+                value = (int)((java.lang.String)field_metadata_is_identified_by.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_pe.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_metadata_is_identified_by_a_gobally_unique_identifier.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_gl.getValue()).substring( 0, 1 ); //$JR_EXPR_ID=14$
+                        <----------------------------------------------------------------------------------->
+2. Cannot cast from String to int
+                value = (int)((java.lang.String)field_metadata_is_identified_by.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_pe.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_metadata_is_identified_by_a_gobally_unique_identifier.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_gl.getValue()).substring( 0, 1 ); //$JR_EXPR_ID=14$
+                                                                                                              <------------------------------------------------------------------------------------>
+3. Cannot cast from String to int
+                value = (int)((java.lang.String)field_metadata_is_identified_by.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_pe.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_metadata_is_identified_by_a_gobally_unique_identifier.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_gl.getValue()).substring( 0, 1 ); //$JR_EXPR_ID=14$
+                                                                                                                                                                                                     <--------------------------------------------------------------------------------------------------------------->
+4. Cannot cast from String to int
+                value = (int)((java.lang.String)field_metadata_is_identified_by.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_pe.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_metadata_is_identified_by_a_gobally_unique_identifier.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_gl.getValue()).substring( 0, 1 ); //$JR_EXPR_ID=14$
+                                                                                                                                                                                                                                                                                                                       <------------------------------------------------------------------------------------>
+5. Cannot cast from String to int
+                value = (int)((java.lang.String)field_metadata_is_identified_by.getOldValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_pe.getOldValue()).substring( 0, 1 )+(int)((java.lang.String)field_metadata_is_identified_by_a_gobally_unique_identifier.getOldValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_gl.getOldValue()).substring( 0, 1 ); //$JR_EXPR_ID=14$
+                        <-------------------------------------------------------------------------------------->
+6. Cannot cast from String to int
+                value = (int)((java.lang.String)field_metadata_is_identified_by.getOldValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_pe.getOldValue()).substring( 0, 1 )+(int)((java.lang.String)field_metadata_is_identified_by_a_gobally_unique_identifier.getOldValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_gl.getOldValue()).substring( 0, 1 ); //$JR_EXPR_ID=14$
+                                                                                                                 <--------------------------------------------------------------------------------------->
+7. Cannot cast from String to int
+                value = (int)((java.lang.String)field_metadata_is_identified_by.getOldValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_pe.getOldValue()).substring( 0, 1 )+(int)((java.lang.String)field_metadata_is_identified_by_a_gobally_unique_identifier.getOldValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_gl.getOldValue()).substring( 0, 1 ); //$JR_EXPR_ID=14$
+                                                                                                                                                                                                           <------------------------------------------------------------------------------------------------------------------>
+8. Cannot cast from String to int
+                value = (int)((java.lang.String)field_metadata_is_identified_by.getOldValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_pe.getOldValue()).substring( 0, 1 )+(int)((java.lang.String)field_metadata_is_identified_by_a_gobally_unique_identifier.getOldValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_gl.getOldValue()).substring( 0, 1 ); //$JR_EXPR_ID=14$
+                                                                                                                                                                                                                                                                                                                                <--------------------------------------------------------------------------------------->
+9. Cannot cast from String to int
+                value = (int)((java.lang.String)field_metadata_is_identified_by.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_pe.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_metadata_is_identified_by_a_gobally_unique_identifier.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_gl.getValue()).substring( 0, 1 ); //$JR_EXPR_ID=14$
+                        <----------------------------------------------------------------------------------->
+10. Cannot cast from String to int
+                value = (int)((java.lang.String)field_metadata_is_identified_by.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_pe.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_metadata_is_identified_by_a_gobally_unique_identifier.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_gl.getValue()).substring( 0, 1 ); //$JR_EXPR_ID=14$
+                                                                                                              <------------------------------------------------------------------------------------>
+11. Cannot cast from String to int
+                value = (int)((java.lang.String)field_metadata_is_identified_by.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_pe.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_metadata_is_identified_by_a_gobally_unique_identifier.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_gl.getValue()).substring( 0, 1 ); //$JR_EXPR_ID=14$
+                                                                                                                                                                                                     <--------------------------------------------------------------------------------------------------------------->
+12. Cannot cast from String to int
+                value = (int)((java.lang.String)field_metadata_is_identified_by.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_pe.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_metadata_is_identified_by_a_gobally_unique_identifier.getValue()).substring( 0, 1 )+(int)((java.lang.String)field_data_is_identified_by_a_gl.getValue()).substring( 0, 1 ); //$JR_EXPR_ID=14$
+                                                                                                                                                                                                                                                                                                                       <------------------------------------------------------------------------------------>
+12 errors
+.
+17/Jun/2021 13:55:32,214- REDCapSPARKService: Incoming event:
+
+17/Jun/2021 13:55:32,214- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+17/Jun/2021 13:55:32,215- REDCapHttpConnector: Getting record input stream...
+17/Jun/2021 13:55:32,712- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+17/Jun/2021 13:55:32,713- REDCapSPARKService: Project ID: 15, Record ID: 2
+17/Jun/2021 13:55:32,713- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+17/Jun/2021 13:55:32,713- REDCapSPARKService: Mail path: config/mails/mail.txt
+17/Jun/2021 13:55:32,713- REDCapHttpConnector: Getting record input stream...
+17/Jun/2021 13:55:33,917- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+17/Jun/2021 13:55:34,667- REDCapMailClient: Validation finished
+17/Jun/2021 13:55:34,677- REDCapMailClient: PDF attached, sending report
+17/Jun/2021 13:55:36,237- REDCapMailClient: PDF report sent to: robert.reihs@medunigraz.at
+17/Jun/2021 13:55:36,237- REDCapSPARKService: <892643248.1.1623930934700.JavaMail.reihsr@reihsr-XPS-15-9560>
+17/Jun/2021 14:12:38,268- REDCapSPARKService: Incoming event:
+
+17/Jun/2021 14:12:38,269- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+17/Jun/2021 14:12:38,269- REDCapHttpConnector: Getting record input stream...
+17/Jun/2021 14:12:38,638- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+17/Jun/2021 14:12:38,638- REDCapSPARKService: Project ID: 15, Record ID: 2
+17/Jun/2021 14:12:38,638- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+17/Jun/2021 14:12:38,638- REDCapSPARKService: Mail path: config/mails/mail.txt
+17/Jun/2021 14:12:38,639- REDCapHttpConnector: Getting record input stream...
+17/Jun/2021 14:12:39,383- REDCapSPARKService: [Ljava.lang.String; cannot be cast to java.lang.Comparable
+17/Jun/2021 14:23:16,515- REDCapSPARKService: Incoming event:
+
+17/Jun/2021 14:23:16,515- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+17/Jun/2021 14:23:16,515- REDCapHttpConnector: Getting record input stream...
+17/Jun/2021 14:23:17,121- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+17/Jun/2021 14:23:17,122- REDCapSPARKService: Project ID: 15, Record ID: 2
+17/Jun/2021 14:23:17,122- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+17/Jun/2021 14:23:17,122- REDCapSPARKService: Mail path: config/mails/mail.txt
+17/Jun/2021 14:23:17,122- REDCapHttpConnector: Getting record input stream...
+17/Jun/2021 14:23:17,783- REDCapSPARKService: java.lang.String cannot be cast to java.lang.Number
+17/Jun/2021 14:24:22,809- REDCapSPARKService: Incoming event:
+
+17/Jun/2021 14:24:22,809- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+17/Jun/2021 14:24:22,809- REDCapHttpConnector: Getting record input stream...
+17/Jun/2021 14:24:23,288- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+17/Jun/2021 14:24:23,288- REDCapSPARKService: Project ID: 15, Record ID: 2
+17/Jun/2021 14:24:23,289- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+17/Jun/2021 14:24:23,289- REDCapSPARKService: Mail path: config/mails/mail.txt
+17/Jun/2021 14:24:23,289- REDCapHttpConnector: Getting record input stream...
+17/Jun/2021 14:24:23,780- REDCapSPARKService: Errors were encountered when compiling report expressions class file:
+1. The method parsInt(String) is undefined for the type Integer
+                value = Integer.parsInt(((java.lang.String)field_metadata_is_identified_by.getValue()).substring( 0, 1 )); //$JR_EXPR_ID=14$
+                                <----->
+2. The method parsInt(String) is undefined for the type Integer
+                value = Integer.parsInt(((java.lang.String)field_metadata_is_identified_by.getOldValue()).substring( 0, 1 )); //$JR_EXPR_ID=14$
+                                <----->
+3. The method parsInt(String) is undefined for the type Integer
+                value = Integer.parsInt(((java.lang.String)field_metadata_is_identified_by.getValue()).substring( 0, 1 )); //$JR_EXPR_ID=14$
+                                <----->
+3 errors
+.
+17/Jun/2021 14:26:35,359- REDCapSPARKService: Incoming event:
+
+17/Jun/2021 14:26:35,360- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+17/Jun/2021 14:26:35,360- REDCapHttpConnector: Getting record input stream...
+17/Jun/2021 14:26:35,594- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+17/Jun/2021 14:26:35,594- REDCapSPARKService: Project ID: 15, Record ID: 2
+17/Jun/2021 14:26:35,594- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+17/Jun/2021 14:26:35,595- REDCapSPARKService: Mail path: config/mails/mail.txt
+17/Jun/2021 14:26:35,595- REDCapHttpConnector: Getting record input stream...
+17/Jun/2021 14:26:36,378- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+17/Jun/2021 14:26:36,481- REDCapMailClient: Validation finished
+17/Jun/2021 14:26:36,481- REDCapMailClient: PDF attached, sending report
+17/Jun/2021 14:26:38,331- REDCapMailClient: PDF report sent to: robert.reihs@medunigraz.at
+17/Jun/2021 14:26:38,331- REDCapSPARKService: <873343166.3.1623932796484.JavaMail.reihsr@reihsr-XPS-15-9560>
