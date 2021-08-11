@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -28,6 +30,8 @@ import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.data.JRTableModelDataSource;
 import net.sf.jasperreports.view.JasperViewer;
 
+import net.sf.jasperreports.engine.JREmptyDataSource;
+
 public class REDCapJRXMLTemplateCompiler {
 
 	
@@ -46,7 +50,11 @@ public class REDCapJRXMLTemplateCompiler {
 		List<CSVRecord> records = csvp.getRecords();
 		
 		JRTableModelDataSource[] jrtmRecords = new JRTableModelDataSource[records.size()];
-		
+		///Test
+		String[] findables = new String[] {"metadata_is_identified_by", "data_is_identified_by_a_pe", "metadata_is_identified_by_a_gobally_unique_identifier", "data_is_identified_by_a_gl", "rich_metadata_is_provided", "metadata_includes_the_iden", "metadata_is_offered_in_suc"};
+		//JRTableModelDataSource[] jrtmRecords = new JRTableModelDataSource[findables.length];
+
+		///Test
 		if(records.size() == 0) {
 			
 			csvp.close();
@@ -56,28 +64,49 @@ public class REDCapJRXMLTemplateCompiler {
 		
 		CSVRecord header = records.get(0);
 		
-		String[] headerColumns = new String[header.size()];
-		
-		for(int i=0; i<headerColumns.length; i++) {
-			
-			headerColumns[i]=header.get(i);
-		}
-		
+		String[] headerColumns = new String[3];
+//		String[] headerColumns = new String[header.size()];
+
+//		for(int i=0; i<headerColumns.length-3; i++) {
+////		for(int i=0; i<headerColumns.length; i++) {
+//			headerColumns[i]=header.get(i);
+//		}
+		///Test
+		headerColumns[headerColumns.length-3]="Findable_Series";
+		headerColumns[headerColumns.length-2]="Findable_Value";
+		headerColumns[headerColumns.length-1]="Findable_Category";
+
 		for(int j=1; j<records.size(); j++) {
-			
-			String[][] data = new String[1][headerColumns.length];
-			
-			CSVRecord csvRecord = records.get(j);
-			
-			for(int i=0; i<headerColumns.length; i++) {
-				
-				data[0][i]=csvRecord.get(i);
-				//System.out.println(headerColumns[i] + ": " + data[0][i].length());
+
+
+			Object[][] data = new Object[findables.length][headerColumns.length];
+//			findables.length
+//			CSVRecord csvRecord = records.get(j);
+//
+//			for(int i=0; i<headerColumns.length-3; i++) {
+//
+//				data[0][i]=csvRecord.get(i);
+//				//System.out.println(headerColumns[i] + ": " + data[0][i].length());
+//				logger.info("data: "+headerColumns[i]+ ": "+data[0][i]);
+//			}
+			///Test
+//			data[0][headerColumns.length-3]= "Test";//new String[]{"Test","Test","Test"};///
+//			data[0][headerColumns.length-2]= new int[]{1, 2, 0};
+//			data[0][headerColumns.length-1]= new String[]{findables[0], findables[1], findables[2]};
+			for(int test=0;test< data.length;test++){
+				//data[test]=data[0];
+				data[test][headerColumns.length-3]= "Test";///
+				data[test][headerColumns.length-2]= test;//"{1,2,0,3,1,2,0}";
+				data[test][headerColumns.length-1]= findables[test];
+
 			}
-			
+			///Test
+
+
 			DefaultTableModel dtModel = new DefaultTableModel(data, headerColumns);
-			
+			logger.info("dtModel: "+dtModel.getRowCount()+" x "+dtModel.getColumnCount());
 			jrtmRecords[j-1]= new JRTableModelDataSource(dtModel);
+
 		}
 		
 		csvp.close();
@@ -89,14 +118,21 @@ public class REDCapJRXMLTemplateCompiler {
 	public JasperPrint getReportFromJRXML(InputStream csvSrc, InputStream jrxmlSrc) throws IOException, JRException {
 			
 		JasperReport jr = JasperCompileManager.compileReport(jrxmlSrc);
-		
+
 		JRTableModelDataSource[] records = readRecordCSV(csvSrc);
-		
+		logger.info("records_length: "+records.length);
 		JasperPrint firstPrint;
 		
 		if(records.length > 0) {
-		
-			firstPrint = JasperFillManager.fillReport(jr, new HashMap<String, Object>(), records[0]);      
+			logger.info("records: "+records[0]);
+			HashMap<String, Object> parameters = new HashMap<String, Object>();
+			
+//			parameters.put("Findable_Series", new String[]{"Findable_Series","Findable_Series"});
+//			parameters.put("Findable_Value",  new String[]{"1","2"});
+//			parameters.put("Findable_Category",  new String[]{"cat1","cat2"});
+//			logger.info("parameters: "+parameters);
+
+			firstPrint = JasperFillManager.fillReport(jr, parameters, records[0]);
 		
 			firstPrint.setPageWidth(PAGE_WIDTH_A4);
 			firstPrint.setPageHeight(PAGE_HEIGHT_A4);
@@ -106,7 +142,13 @@ public class REDCapJRXMLTemplateCompiler {
 			firstPrint.setRightMargin(PAGE_MARGIN);
 		    
 			for(int j=1; j<records.length; j++) {
-		    
+				logger.info("record["+j+"]: "+records[j]);
+				if(records[j] == null ){
+					logger.info("next ");
+
+					continue;
+				}
+
 				JasperPrint jasperPrint = JasperFillManager.fillReport(jr, new HashMap<String, Object>(), records[j]);
 				jasperPrint.setPageWidth(PAGE_WIDTH_A4);
 				jasperPrint.setPageHeight(PAGE_HEIGHT_A4);

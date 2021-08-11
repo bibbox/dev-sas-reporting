@@ -24,4 +24,4 @@ services:
         image: busybox
         container_name: dev-sas-reporting-datacontainer
         volumes:
-            - ./config:/config            
+            - ./dev-config:/config
