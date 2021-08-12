@@ -1,22 +1,14 @@
 package sasreporting.redcap.jasper;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
 import javax.swing.table.DefaultTableModel;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
+import org.apache.commons.lang.math.NumberUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -42,7 +34,38 @@ public class REDCapJRXMLTemplateCompiler {
 	public final static int PAGE_HEIGHT_A4 = 842;	
 	public final static int PAGE_MARGIN = 25;
 	
-	
+
+	private Map<String, Map<String, String>> createFAIRdicts(){
+		Map<String, Map<String, String>> dictionaries = new HashMap<String, Map<String, String>>();
+		Map<String, String> findables = new LinkedHashMap<String, String>();
+		Map<String, String> accessibles = new LinkedHashMap<String, String>();
+		Map<String, String> interoperables = new LinkedHashMap<String, String>();
+		Map<String, String> reusables = new LinkedHashMap<String, String>();
+
+		//String[] findables = new String[] {"", "", "", "data_is_identified_by_a_gl", "", "", ""};
+
+		findables.put("metadata_is_identified_by", "F1-01M");
+		findables.put("data_is_identified_by_a_pe", "F1-01D");
+		findables.put("metadata_is_identified_by_a_gobally_unique_identifier", "F1-02M");
+		findables.put("data_is_identified_by_a_gl", "F1-02D");
+		findables.put("rich_metadata_is_provided", "F2-01M");
+		findables.put("metadata_includes_the_iden", "F3-01M");
+		findables.put("metadata_is_offered_in_suc", "F4-01M");
+		dictionaries.put("findable",findables);
+
+		return dictionaries;
+
+	}
+
+	private int maxMapSize(Map<String, Map<String, String>> dict){
+		int[] sizes = new int[dict.size()];
+		int index=0;
+		for ( String key : dict.keySet() ){
+			sizes[index]=dict.get(key).size();
+		}
+		return NumberUtils.max(sizes);
+	}
+
 	private JRTableModelDataSource[] readRecordCSV(InputStream csvInput) throws IOException {
 		
 		CSVParser csvp = new CSVParser(new BufferedReader(new InputStreamReader(csvInput)), CSVFormat.DEFAULT);
@@ -51,7 +74,8 @@ public class REDCapJRXMLTemplateCompiler {
 		
 		JRTableModelDataSource[] jrtmRecords = new JRTableModelDataSource[records.size()];
 		///Test
-		String[] findables = new String[] {"metadata_is_identified_by", "data_is_identified_by_a_pe", "metadata_is_identified_by_a_gobally_unique_identifier", "data_is_identified_by_a_gl", "rich_metadata_is_provided", "metadata_includes_the_iden", "metadata_is_offered_in_suc"};
+		//String[] findables = new String[] {"metadata_is_identified_by", "data_is_identified_by_a_pe", "metadata_is_identified_by_a_gobally_unique_identifier", "data_is_identified_by_a_gl", "rich_metadata_is_provided", "metadata_includes_the_iden", "metadata_is_offered_in_suc"};
+		Map<String, Map<String,String>> fair_dictionaries=createFAIRdicts();
 		//JRTableModelDataSource[] jrtmRecords = new JRTableModelDataSource[findables.length];
 
 		///Test
@@ -64,13 +88,13 @@ public class REDCapJRXMLTemplateCompiler {
 		
 		CSVRecord header = records.get(0);
 		
-		String[] headerColumns = new String[3];
+		String[] headerColumns = new String[header.size()+3];
 //		String[] headerColumns = new String[header.size()];
 
-//		for(int i=0; i<headerColumns.length-3; i++) {
-////		for(int i=0; i<headerColumns.length; i++) {
-//			headerColumns[i]=header.get(i);
-//		}
+		for(int i=0; i<headerColumns.length-3; i++) {
+//		for(int i=0; i<headerColumns.length; i++) {
+			headerColumns[i]=header.get(i);
+		}
 		///Test
 		headerColumns[headerColumns.length-3]="Findable_Series";
 		headerColumns[headerColumns.length-2]="Findable_Value";
@@ -79,26 +103,47 @@ public class REDCapJRXMLTemplateCompiler {
 		for(int j=1; j<records.size(); j++) {
 
 
-			Object[][] data = new Object[findables.length][headerColumns.length];
+			Object[][] data = new Object[maxMapSize(fair_dictionaries)][headerColumns.length];
 //			findables.length
-//			CSVRecord csvRecord = records.get(j);
-//
-//			for(int i=0; i<headerColumns.length-3; i++) {
-//
-//				data[0][i]=csvRecord.get(i);
+			CSVRecord csvRecord = records.get(j);
+
+			for(int i=0; i<headerColumns.length-3; i++) {
+
+				data[0][i]=csvRecord.get(i);
 //				//System.out.println(headerColumns[i] + ": " + data[0][i].length());
-//				logger.info("data: "+headerColumns[i]+ ": "+data[0][i]);
-//			}
+				logger.info("data: "+headerColumns[i]+ ": "+data[0][i]);
+//				for(int test=1;test< data.length;test++){
+//					data[test][i]=csvRecord.get(i);
+////					data[test][i]="TEST";
+//				}
+			}
 			///Test
 //			data[0][headerColumns.length-3]= "Test";//new String[]{"Test","Test","Test"};///
 //			data[0][headerColumns.length-2]= new int[]{1, 2, 0};
 //			data[0][headerColumns.length-1]= new String[]{findables[0], findables[1], findables[2]};
-			for(int test=0;test< data.length;test++){
+			//for(int test=0;test< data.length;test++){
+			int test=0;
+//			LinkedHashMap<String, String> sortedMap = new LinkedHashMap<>();
+//			fair_dictionaries.get("findable").entrySet().stream().sorted(Map.Entry.comparingByValue())
+//					.forEachOrdered(x -> sortedMap.put(x.getKey(), x.getValue()));
+			for ( String current_findable : fair_dictionaries.get("findable").keySet() ){
 				//data[test]=data[0];
-				data[test][headerColumns.length-3]= "Test";///
-				data[test][headerColumns.length-2]= test;//"{1,2,0,3,1,2,0}";
-				data[test][headerColumns.length-1]= findables[test];
-
+//				String current_findable= key.toString();
+				data[test][headerColumns.length-3]= "Findable";///
+				//String current_findable=fair_dictionaries.get("findable").keySet().toArray()[test];
+				//logger.info(fair_dictionaries.get("findable").keySet().toArray()[test]);
+				//String current_findable=fair_dictionaries.get("findable").keySet().toArray()[test].toString();
+				//data[test][headerColumns.length-2]= test%4;//"{1,2,0,3,1,2,0}";
+				int index_of_findable= Arrays.asList(headerColumns).indexOf(current_findable);
+				logger.info(current_findable+": "+fair_dictionaries.get("findable").get(current_findable)+", "+index_of_findable);
+				if(index_of_findable<0){
+					data[test][headerColumns.length-2]= 0;//test;//"{1,2,0,3,1,2,0}";
+				}else{
+					data[test][headerColumns.length-2]= Integer.parseInt(data[0][index_of_findable].toString().substring(0,1));
+//					logger.info("data-value: "+data[test][headerColumns.length-2]);
+				}
+				data[test][headerColumns.length-1]= fair_dictionaries.get("findable").get(current_findable);
+				test++;
 			}
 			///Test
 
@@ -133,7 +178,7 @@ public class REDCapJRXMLTemplateCompiler {
 //			logger.info("parameters: "+parameters);
 
 			firstPrint = JasperFillManager.fillReport(jr, parameters, records[0]);
-		
+
 			firstPrint.setPageWidth(PAGE_WIDTH_A4);
 			firstPrint.setPageHeight(PAGE_HEIGHT_A4);
 			firstPrint.setTopMargin(PAGE_MARGIN);
@@ -143,11 +188,7 @@ public class REDCapJRXMLTemplateCompiler {
 		    
 			for(int j=1; j<records.length; j++) {
 				logger.info("record["+j+"]: "+records[j]);
-				if(records[j] == null ){
-					logger.info("next ");
 
-					continue;
-				}
 
 				JasperPrint jasperPrint = JasperFillManager.fillReport(jr, new HashMap<String, Object>(), records[j]);
 				jasperPrint.setPageWidth(PAGE_WIDTH_A4);
