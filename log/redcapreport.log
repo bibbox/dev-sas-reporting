@@ -15302,3 +15302,133 @@ REUSABLE_Category
 12/Aug/2021 17:00:52,841- REDCapMailClient: Validation finished
 12/Aug/2021 17:00:52,843- REDCapMailClient: PDF attached, sending report
 12/Aug/2021 17:00:52,914- REDCapSPARKService: Sending the email to the following server failed : smtp.gmail.com:465
+13/Aug/2021 09:07:24,204- REDCapSPARKService: Starting REDCap listener
+13/Aug/2021 09:07:30,273- REDCapSPARKService: Incoming event:
+
+13/Aug/2021 09:07:30,274- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+13/Aug/2021 09:07:30,283- REDCapHttpConnector: Getting record input stream...
+13/Aug/2021 09:07:31,693- REDCapSPARKService: Sending email to: emilian.jungwirth@medunigraz.at CC enabled: false
+13/Aug/2021 09:07:31,694- REDCapSPARKService: Project ID: 15, Record ID: 3
+13/Aug/2021 09:07:31,694- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+13/Aug/2021 09:07:31,695- REDCapSPARKService: Mail path: config/mails/mail.txt
+13/Aug/2021 09:07:31,695- REDCapHttpConnector: Getting record input stream...
+13/Aug/2021 09:07:33,907- REDCapJRXMLTemplateCompiler: fair_module: findable
+13/Aug/2021 09:07:33,907- REDCapJRXMLTemplateCompiler: fair_module: accessible
+13/Aug/2021 09:07:33,907- REDCapJRXMLTemplateCompiler: fair_module: interoperable
+13/Aug/2021 09:07:33,907- REDCapJRXMLTemplateCompiler: fair_module: reusable
+13/Aug/2021 09:07:36,434- REDCapSPARKService: CC Address: 
+13/Aug/2021 09:07:36,600- REDCapMailClient: Validation finished
+13/Aug/2021 09:07:36,614- REDCapMailClient: PDF attached, sending report
+13/Aug/2021 09:07:36,737- REDCapSPARKService: Sending the email to the following server failed : smtp.gmail.com:465
+13/Aug/2021 10:41:29,609- REDCapSPARKService: Incoming event:
+
+13/Aug/2021 10:41:29,609- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+13/Aug/2021 10:41:29,609- REDCapHttpConnector: Getting record input stream...
+13/Aug/2021 10:41:30,545- REDCapSPARKService: Sending email to: emilian.jungwirth@medunigraz.at CC enabled: false
+13/Aug/2021 10:41:30,546- REDCapSPARKService: Project ID: 15, Record ID: 3
+13/Aug/2021 10:41:30,546- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+13/Aug/2021 10:41:30,546- REDCapSPARKService: Mail path: config/mails/mail.txt
+13/Aug/2021 10:41:30,546- REDCapHttpConnector: Getting record input stream...
+13/Aug/2021 10:41:31,793- REDCapJRXMLTemplateCompiler: fair_module: findable
+13/Aug/2021 10:41:31,793- REDCapJRXMLTemplateCompiler: fair_module: accessible
+13/Aug/2021 10:41:31,794- REDCapJRXMLTemplateCompiler: fair_module: interoperable
+13/Aug/2021 10:41:31,794- REDCapJRXMLTemplateCompiler: fair_module: reusable
+13/Aug/2021 10:41:32,739- REDCapSPARKService: CC Address: 
+13/Aug/2021 10:41:32,848- REDCapMailClient: Validation finished
+13/Aug/2021 10:41:32,849- REDCapMailClient: PDF attached, sending report
+13/Aug/2021 10:41:32,923- REDCapSPARKService: Sending the email to the following server failed : smtp.gmail.com:465
+13/Aug/2021 10:49:09,473- REDCapSPARKService: Incoming event:
+
+13/Aug/2021 10:49:09,474- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+13/Aug/2021 10:49:09,474- REDCapHttpConnector: Getting record input stream...
+13/Aug/2021 10:49:10,018- REDCapSPARKService: Sending email to: emilian.jungwirth@medunigraz.at CC enabled: false
+13/Aug/2021 10:49:10,018- REDCapSPARKService: Project ID: 15, Record ID: 3
+13/Aug/2021 10:49:10,018- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+13/Aug/2021 10:49:10,018- REDCapSPARKService: Mail path: config/mails/mail.txt
+13/Aug/2021 10:49:10,018- REDCapHttpConnector: Getting record input stream...
+13/Aug/2021 10:49:10,694- REDCapSPARKService: org.xml.sax.SAXParseException; lineNumber: 118; columnNumber: 18; cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://jasperreports.sourceforge.net/jasperreports":labelFont}'. One of '{"http://jasperreports.sourceforge.net/jasperreports":chartTitle, "http://jasperreports.sourceforge.net/jasperreports":chartSubtitle, "http://jasperreports.sourceforge.net/jasperreports":chartLegend, "http://jasperreports.sourceforge.net/jasperreports":anchorNameExpression, "http://jasperreports.sourceforge.net/jasperreports":hyperlinkReferenceExpression, "http://jasperreports.sourceforge.net/jasperreports":hyperlinkWhenExpression, "http://jasperreports.sourceforge.net/jasperreports":hyperlinkAnchorExpression, "http://jasperreports.sourceforge.net/jasperreports":hyperlinkPageExpression, "http://jasperreports.sourceforge.net/jasperreports":hyperlinkTooltipExpression, "http://jasperreports.sourceforge.net/jasperreports":hyperlinkParameter}' is expected.
+13/Aug/2021 10:51:05,992- REDCapSPARKService: Incoming event:
+
+13/Aug/2021 10:51:05,992- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+13/Aug/2021 10:51:05,993- REDCapHttpConnector: Getting record input stream...
+13/Aug/2021 10:51:06,448- REDCapSPARKService: Sending email to: emilian.jungwirth@medunigraz.at CC enabled: false
+13/Aug/2021 10:51:06,448- REDCapSPARKService: Project ID: 15, Record ID: 3
+13/Aug/2021 10:51:06,449- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+13/Aug/2021 10:51:06,449- REDCapSPARKService: Mail path: config/mails/mail.txt
+13/Aug/2021 10:51:06,449- REDCapHttpConnector: Getting record input stream...
+13/Aug/2021 10:51:07,543- REDCapJRXMLTemplateCompiler: fair_module: findable
+13/Aug/2021 10:51:07,543- REDCapJRXMLTemplateCompiler: fair_module: accessible
+13/Aug/2021 10:51:07,544- REDCapJRXMLTemplateCompiler: fair_module: interoperable
+13/Aug/2021 10:51:07,544- REDCapJRXMLTemplateCompiler: fair_module: reusable
+13/Aug/2021 10:51:09,016- REDCapSPARKService: CC Address: 
+13/Aug/2021 10:51:09,483- REDCapMailClient: Validation finished
+13/Aug/2021 10:51:09,486- REDCapMailClient: PDF attached, sending report
+13/Aug/2021 10:51:09,551- REDCapSPARKService: Sending the email to the following server failed : smtp.gmail.com:465
+13/Aug/2021 10:51:37,564- REDCapSPARKService: Incoming event:
+
+13/Aug/2021 10:51:37,564- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+13/Aug/2021 10:51:37,564- REDCapHttpConnector: Getting record input stream...
+13/Aug/2021 10:51:37,854- REDCapSPARKService: Sending email to: emilian.jungwirth@medunigraz.at CC enabled: false
+13/Aug/2021 10:51:37,854- REDCapSPARKService: Project ID: 15, Record ID: 3
+13/Aug/2021 10:51:37,854- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+13/Aug/2021 10:51:37,854- REDCapSPARKService: Mail path: config/mails/mail.txt
+13/Aug/2021 10:51:37,855- REDCapHttpConnector: Getting record input stream...
+13/Aug/2021 10:51:38,607- REDCapJRXMLTemplateCompiler: fair_module: findable
+13/Aug/2021 10:51:38,607- REDCapJRXMLTemplateCompiler: fair_module: accessible
+13/Aug/2021 10:51:38,608- REDCapJRXMLTemplateCompiler: fair_module: interoperable
+13/Aug/2021 10:51:38,608- REDCapJRXMLTemplateCompiler: fair_module: reusable
+13/Aug/2021 10:51:39,283- REDCapSPARKService: CC Address: 
+13/Aug/2021 10:51:39,364- REDCapMailClient: Validation finished
+13/Aug/2021 10:51:39,365- REDCapMailClient: PDF attached, sending report
+13/Aug/2021 10:51:39,406- REDCapSPARKService: Sending the email to the following server failed : smtp.gmail.com:465
+13/Aug/2021 10:57:51,456- REDCapSPARKService: Incoming event:
+
+13/Aug/2021 10:57:51,456- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+13/Aug/2021 10:57:51,457- REDCapHttpConnector: Getting record input stream...
+13/Aug/2021 10:57:51,956- REDCapSPARKService: Sending email to: emilian.jungwirth@medunigraz.at CC enabled: false
+13/Aug/2021 10:57:51,956- REDCapSPARKService: Project ID: 15, Record ID: 3
+13/Aug/2021 10:57:51,956- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+13/Aug/2021 10:57:51,956- REDCapSPARKService: Mail path: config/mails/mail.txt
+13/Aug/2021 10:57:51,956- REDCapHttpConnector: Getting record input stream...
+13/Aug/2021 10:57:52,730- REDCapJRXMLTemplateCompiler: fair_module: findable
+13/Aug/2021 10:57:52,731- REDCapJRXMLTemplateCompiler: fair_module: accessible
+13/Aug/2021 10:57:52,731- REDCapJRXMLTemplateCompiler: fair_module: interoperable
+13/Aug/2021 10:57:52,731- REDCapJRXMLTemplateCompiler: fair_module: reusable
+13/Aug/2021 10:57:53,301- REDCapSPARKService: CC Address: 
+13/Aug/2021 10:57:53,449- REDCapMailClient: Validation finished
+13/Aug/2021 10:57:53,451- REDCapMailClient: PDF attached, sending report
+13/Aug/2021 10:57:53,512- REDCapSPARKService: Sending the email to the following server failed : smtp.gmail.com:465
+13/Aug/2021 11:00:52,780- REDCapSPARKService: Incoming event:
+
+13/Aug/2021 11:00:52,780- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+13/Aug/2021 11:00:52,780- REDCapHttpConnector: Getting record input stream...
+13/Aug/2021 11:00:53,308- REDCapSPARKService: Sending email to: emilian.jungwirth@medunigraz.at CC enabled: false
+13/Aug/2021 11:00:53,309- REDCapSPARKService: Project ID: 15, Record ID: 3
+13/Aug/2021 11:00:53,309- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+13/Aug/2021 11:00:53,309- REDCapSPARKService: Mail path: config/mails/mail.txt
+13/Aug/2021 11:00:53,309- REDCapHttpConnector: Getting record input stream...
+13/Aug/2021 11:00:53,897- REDCapJRXMLTemplateCompiler: fair_module: findable
+13/Aug/2021 11:00:53,898- REDCapJRXMLTemplateCompiler: fair_module: accessible
+13/Aug/2021 11:00:53,898- REDCapJRXMLTemplateCompiler: fair_module: interoperable
+13/Aug/2021 11:00:53,898- REDCapJRXMLTemplateCompiler: fair_module: reusable
+13/Aug/2021 11:00:54,444- REDCapSPARKService: CC Address: 
+13/Aug/2021 11:00:54,535- REDCapMailClient: Validation finished
+13/Aug/2021 11:00:54,536- REDCapMailClient: PDF attached, sending report
+13/Aug/2021 11:00:54,598- REDCapSPARKService: Sending the email to the following server failed : smtp.gmail.com:465
+13/Aug/2021 11:01:49,748- REDCapSPARKService: Incoming event:
+
+13/Aug/2021 11:01:49,748- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+13/Aug/2021 11:01:49,749- REDCapHttpConnector: Getting record input stream...
+13/Aug/2021 11:01:50,140- REDCapSPARKService: Sending email to: emilian.jungwirth@medunigraz.at CC enabled: false
+13/Aug/2021 11:01:50,140- REDCapSPARKService: Project ID: 15, Record ID: 3
+13/Aug/2021 11:01:50,140- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+13/Aug/2021 11:01:50,140- REDCapSPARKService: Mail path: config/mails/mail.txt
+13/Aug/2021 11:01:50,140- REDCapHttpConnector: Getting record input stream...
+13/Aug/2021 11:01:50,809- REDCapJRXMLTemplateCompiler: fair_module: findable
+13/Aug/2021 11:01:50,810- REDCapJRXMLTemplateCompiler: fair_module: accessible
+13/Aug/2021 11:01:50,810- REDCapJRXMLTemplateCompiler: fair_module: interoperable
+13/Aug/2021 11:01:50,810- REDCapJRXMLTemplateCompiler: fair_module: reusable
+13/Aug/2021 11:01:51,438- REDCapSPARKService: CC Address: 
+13/Aug/2021 11:01:51,489- REDCapMailClient: Validation finished
+13/Aug/2021 11:01:51,489- REDCapMailClient: PDF attached, sending report
+13/Aug/2021 11:01:51,529- REDCapSPARKService: Sending the email to the following server failed : smtp.gmail.com:465

@@ -22,7 +22,6 @@ import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.data.JRTableModelDataSource;
 import net.sf.jasperreports.view.JasperViewer;
 
-import net.sf.jasperreports.engine.JREmptyDataSource;
 
 public class REDCapJRXMLTemplateCompiler {
 
@@ -36,13 +35,12 @@ public class REDCapJRXMLTemplateCompiler {
 	
 
 	private Map<String, Map<String, String>> createFAIRdicts(){
+		//TODO load from a config file
 		Map<String, Map<String, String>> dictionaries = new LinkedHashMap<String, Map<String, String>>();
 		Map<String, String> findables = new LinkedHashMap<String, String>();
 		Map<String, String> accessibles = new LinkedHashMap<String, String>();
 		Map<String, String> interoperables = new LinkedHashMap<String, String>();
 		Map<String, String> reusables = new LinkedHashMap<String, String>();
-
-		//String[] findables = new String[] {"", "", "", "data_is_identified_by_a_gl", "", "", ""};
 
 		findables.put("metadata_is_identified_by", "F1-01M");
 		findables.put("data_is_identified_by_a_pe", "F1-01D");
@@ -114,12 +112,10 @@ public class REDCapJRXMLTemplateCompiler {
 		List<CSVRecord> records = csvp.getRecords();
 		
 		JRTableModelDataSource[] jrtmRecords = new JRTableModelDataSource[records.size()];
-		///Test
-		//String[] findables = new String[] {"metadata_is_identified_by", "data_is_identified_by_a_pe", "metadata_is_identified_by_a_gobally_unique_identifier", "data_is_identified_by_a_gl", "rich_metadata_is_provided", "metadata_includes_the_iden", "metadata_is_offered_in_suc"};
-		Map<String, Map<String,String>> fair_dictionaries=createFAIRdicts();
-		//JRTableModelDataSource[] jrtmRecords = new JRTableModelDataSource[findables.length];
 
-		///Test
+		//Load Fair fields and indicators
+		Map<String, Map<String,String>> fair_dictionaries=createFAIRdicts();
+
 		if(records.size() == 0) {
 			
 			csvp.close();
@@ -128,130 +124,70 @@ public class REDCapJRXMLTemplateCompiler {
 		}
 		
 		CSVRecord header = records.get(0);
-		int fair_columns=3*4;
+		//3 Fields for Spider Chart: Series, Category and Value
+		int fair_fields_per_module=3;
+		int fair_columns=fair_fields_per_module*fair_dictionaries.size();
 		String[] headerColumns = new String[header.size()+fair_columns];
 //		String[] headerColumns = new String[header.size()];
 
 		for(int i=0; i<headerColumns.length-fair_columns; i++) {
-//		for(int i=0; i<headerColumns.length; i++) {
 			headerColumns[i]=header.get(i);
 		}
-		///Test
+
+		// Create header names (FINDABLE, ACCESSABLE, INTEROPERABLE, REUSABLE) with _Series, _Value and _Category
+		// Has to have the same name in the jrxml template
 		Map<String, Integer> fair_offsets = new LinkedHashMap<String, Integer>();
 		for(int i = 0;i<fair_dictionaries.size();i++){
 			String current_key = fair_dictionaries.keySet().toArray()[i].toString();
-			fair_offsets.put(current_key , i*3);
-			headerColumns[headerColumns.length-fair_columns+i*3]=current_key.toUpperCase()+"_Series";
-			headerColumns[headerColumns.length-fair_columns+i*3+1]=current_key.toUpperCase()+"_Value";
-			headerColumns[headerColumns.length-fair_columns+i*3+2]=current_key.toUpperCase()+"_Category";
-//			logger.info("header_fair: \n"+
-//					headerColumns[headerColumns.length-fair_columns+i*3]+"\n"+
-//					headerColumns[headerColumns.length-fair_columns+i*3+1]+"\n"+
-//					headerColumns[headerColumns.length-fair_columns+i*3+2]+"\n"
-//			);
+			fair_offsets.put(current_key , i*fair_fields_per_module);
+			headerColumns[headerColumns.length-fair_columns+i*fair_fields_per_module]=current_key.toUpperCase()+"_Series";
+			headerColumns[headerColumns.length-fair_columns+i*fair_fields_per_module+1]=current_key.toUpperCase()+"_Value";
+			headerColumns[headerColumns.length-fair_columns+i*fair_fields_per_module+2]=current_key.toUpperCase()+"_Category";
 		}
-//		fair_offsets.put("findable",0);
-//		fair_offsets.put("accessible",3);
-//		fair_offsets.put("interoperable",6);
-//		fair_offsets.put("reusable",9);
-
-
-//		The loop is just a loop, but a forEach instructs the library to perform the action on each element, without specifying neither the order of actions (for parallel streams) nor threads which will execute them. If you use forEachOrdered, then there are still no guarantees about threads, but at least you have the guarantee of happens-before relationship between actions on subsequent elements.
-//		fair_dictionaries.entrySet().stream().forEachOrdered(x -> fair_offsets.put(x.getKey(), 0));
-
-//		headerColumns[headerColumns.length-fair_columns+fair_offsets.get("findable")]="Findable_Series";
-//		headerColumns[headerColumns.length-fair_columns]="Findable_Value";
-//		headerColumns[headerColumns.length-fair_columns]="Findable_Category";
-//		headerColumns[headerColumns.length-fair_columns]="Accessible_Series";
-//		headerColumns[headerColumns.length-fair_columns]="Accessible_Value";
-//		headerColumns[headerColumns.length-fair_columns]="Accessible_Category";
-//		headerColumns[headerColumns.length-fair_columns]="Interoperable_Series";
-//		headerColumns[headerColumns.length-fair_columns]="Interoperable_Value";
-//		headerColumns[headerColumns.length-fair_columns]="Interoperable_Category";
-//		headerColumns[headerColumns.length-fair_columns]="Reusable_Series";
-//		headerColumns[headerColumns.length-fair_columns]="Reusable_Value";
-//		headerColumns[headerColumns.length-fair_columns]="Reusable_Category";
 
 		for(int j=1; j<records.size(); j++) {
 
-
+			// Expression for Value in SpiderChart allows to convert string to int, but then only one value gets used.
+			// Therefore, are teh values converted here to int and data has to hold int and String.
 			Object[][] data = new Object[maxMapSize(fair_dictionaries)][headerColumns.length];
-//			findables.length
 			CSVRecord csvRecord = records.get(j);
-
+			//Fill data
 			for(int i=0; i<headerColumns.length-fair_columns; i++) {
 
 				data[0][i]=csvRecord.get(i);
 //				//System.out.println(headerColumns[i] + ": " + data[0][i].length());
-				logger.info("data: "+headerColumns[i]+ ": "+data[0][i]);
-//				for(int test=1;test< data.length;test++){
-//					data[test][i]=csvRecord.get(i);
-////					data[test][i]="TEST";
-//				}
 			}
-			///Test
-//			data[0][headerColumns.length-3]= "Test";//new String[]{"Test","Test","Test"};///
-//			data[0][headerColumns.length-2]= new int[]{1, 2, 0};
-//			data[0][headerColumns.length-1]= new String[]{findables[0], findables[1], findables[2]};
-			//for(int test=0;test< data.length;test++){
-//			int data_index=0;
-//			LinkedHashMap<String, String> sortedMap = new LinkedHashMap<>();
-//			fair_dictionaries.get("findable").entrySet().stream().sorted(Map.Entry.comparingByValue())
-//					.forEachOrdered(x -> sortedMap.put(x.getKey(), x.getValue()));
-//			for ( String current_findable : fair_dictionaries.get("findable").keySet() ){
-//				//data[test]=data[0];
-////				String current_findable= key.toString();
-//				data[data_index][headerColumns.length-3]= "Findable";///
-//				//String current_findable=fair_dictionaries.get("findable").keySet().toArray()[test];
-//				//logger.info(fair_dictionaries.get("findable").keySet().toArray()[test]);
-//				//String current_findable=fair_dictionaries.get("findable").keySet().toArray()[test].toString();
-//				//data[test][headerColumns.length-2]= test%4;//"{1,2,0,3,1,2,0}";
-//				int index_of_findable= Arrays.asList(headerColumns).indexOf(current_findable);
-//				logger.info(current_findable+": "+fair_dictionaries.get("findable").get(current_findable)+", "+index_of_findable);
-//				if(index_of_findable<0){
-//					data[data_index][headerColumns.length-2]= 0;//test;//"{1,2,0,3,1,2,0}";
-//				}else{
-//					data[data_index][headerColumns.length-2]= Integer.parseInt(data[0][index_of_findable].toString().substring(0,1));
-////					logger.info("data-value: "+data[test][headerColumns.length-2]);
-//				}
-//				data[data_index][headerColumns.length-1]= fair_dictionaries.get("findable").get(current_findable);
-//				data_index++;
-//			}
 
+			// Fill extra columns with aggregated FAIR data for Spider Chart
 			for ( String fair_module : fair_dictionaries.keySet() ) {
-//				data_index = 0;
-				logger.info("fair_module: "+fair_module);
-//				for (String current_indicator : fair_dictionaries.get(fair_module).keySet()) {
+//				logger.info("fair_module: "+fair_module);
+
 				for(int data_index=0;data_index<data.length;data_index++){
 
 					int col_offset=headerColumns.length - fair_columns + fair_offsets.get(fair_module);
 					data[data_index][col_offset] = fair_module;///
-					logger.info("data_index: "+data_index);
+					// SpiderChart does not allow null in Category series name. Therefore loop back to beginning. (Data gets grouped anywhy)
 					String current_indicator = fair_dictionaries.get(fair_module).keySet().toArray()[data_index % fair_dictionaries.get(fair_module).size()].toString();
 
-					int index_of_findable = Arrays.asList(headerColumns).indexOf(current_indicator);
-					logger.info(current_indicator + ": " + fair_dictionaries.get(fair_module).get(current_indicator) + ", " + index_of_findable);
-					if (index_of_findable < 0 ) {
-						data[data_index][col_offset + 1] = 0;//test;//"{1,2,0,3,1,2,0}";
+					//Get index for the current indicator
+					int index_of_indicator = Arrays.asList(headerColumns).indexOf(current_indicator);
+					// not found -> -1
+					if (index_of_indicator < 0 ) {
+						data[data_index][col_offset + 1] = 0;
 					} else {
-						if(data[0][index_of_findable].equals("")){
+						// Field is empty if nothing was selected --> This is interpreted as 0 for this indicator
+						if(data[0][index_of_indicator].equals("")){
 							data[data_index][col_offset + 1] = 0;
 						}else{
-							data[data_index][col_offset + 1] = Integer.parseInt(data[0][index_of_findable].toString().substring(0, 1));
+							data[data_index][col_offset + 1] = Integer.parseInt(data[0][index_of_indicator].toString().substring(0, 1));
 						}
 					}
 					data[data_index][col_offset + 2] = fair_dictionaries.get(fair_module).get(current_indicator);
-					logger.info("fair_header: "+headerColumns[col_offset]+","+headerColumns[col_offset+1]+","+headerColumns[col_offset+2]);
-					logger.info("fair_data: "+data[data_index][col_offset]+","+data[data_index][col_offset+1]+","+data[data_index][col_offset+2]);
-					//data_index++;
 				}
 
 			}
-			///Test
-
 
 			DefaultTableModel dtModel = new DefaultTableModel(data, headerColumns);
-			logger.info("dtModel: "+dtModel.getRowCount()+" x "+dtModel.getColumnCount());
 			jrtmRecords[j-1]= new JRTableModelDataSource(dtModel);
 
 		}
@@ -267,19 +203,11 @@ public class REDCapJRXMLTemplateCompiler {
 		JasperReport jr = JasperCompileManager.compileReport(jrxmlSrc);
 
 		JRTableModelDataSource[] records = readRecordCSV(csvSrc);
-		logger.info("records_length: "+records.length);
 		JasperPrint firstPrint;
 		
 		if(records.length > 0) {
-			logger.info("records: "+records[0]);
-			HashMap<String, Object> parameters = new HashMap<String, Object>();
-			
-//			parameters.put("Findable_Series", new String[]{"Findable_Series","Findable_Series"});
-//			parameters.put("Findable_Value",  new String[]{"1","2"});
-//			parameters.put("Findable_Category",  new String[]{"cat1","cat2"});
-//			logger.info("parameters: "+parameters);
 
-			firstPrint = JasperFillManager.fillReport(jr, parameters, records[0]);
+			firstPrint = JasperFillManager.fillReport(jr, new HashMap<String, Object>(), records[0]);
 
 			firstPrint.setPageWidth(PAGE_WIDTH_A4);
 			firstPrint.setPageHeight(PAGE_HEIGHT_A4);
@@ -289,8 +217,6 @@ public class REDCapJRXMLTemplateCompiler {
 			firstPrint.setRightMargin(PAGE_MARGIN);
 		    
 			for(int j=1; j<records.length; j++) {
-				logger.info("record["+j+"]: "+records[j]);
-
 
 				JasperPrint jasperPrint = JasperFillManager.fillReport(jr, new HashMap<String, Object>(), records[j]);
 				jasperPrint.setPageWidth(PAGE_WIDTH_A4);

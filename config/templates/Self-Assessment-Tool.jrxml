@@ -110,15 +110,18 @@
 		<band height="556">
 			<printWhenExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()==1)]]></printWhenExpression>
 			<componentElement>
-				<reportElement x="50" y="20" width="205" height="210" uuid="6afc8a08-4370-47fd-916c-c281ca852736">
+				<reportElement x="17" y="8" width="280" height="235" uuid="78b0f39f-e969-46db-8a73-8b3147ae4f73">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<sc:spiderChart xmlns:sc="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
 					<sc:chartSettings isShowLegend="false">
 						<chartTitle>
 							<titleExpression><![CDATA["Indicators for Findable"]]></titleExpression>
 						</chartTitle>
-						<chartSubtitle/>
+						<chartSubtitle>
+							<font size="10.0"/>
+						</chartSubtitle>
 						<chartLegend/>
 					</sc:chartSettings>
 					<sc:spiderDataset>
@@ -135,8 +138,10 @@
 				</sc:spiderChart>
 			</componentElement>
 			<componentElement>
-				<reportElement x="340" y="260" width="205" height="210" uuid="6afc8a08-4370-47fd-916c-c281ca852736">
+				<reportElement x="298" y="245" width="280" height="235" uuid="6afc8a08-4370-47fd-916c-c281ca852736">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<sc:spiderChart xmlns:sc="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
 					<sc:chartSettings isShowLegend="false">
@@ -160,8 +165,10 @@
 				</sc:spiderChart>
 			</componentElement>
 			<componentElement>
-				<reportElement x="50" y="260" width="205" height="210" uuid="6afc8a08-4370-47fd-916c-c281ca852736">
+				<reportElement x="17" y="245" width="280" height="235" uuid="6afc8a08-4370-47fd-916c-c281ca852736">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<sc:spiderChart xmlns:sc="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
 					<sc:chartSettings isShowLegend="false">
@@ -185,8 +192,10 @@
 				</sc:spiderChart>
 			</componentElement>
 			<componentElement>
-				<reportElement x="340" y="20" width="205" height="210" uuid="6afc8a08-4370-47fd-916c-c281ca852736">
+				<reportElement x="298" y="8" width="280" height="235" uuid="6afc8a08-4370-47fd-916c-c281ca852736">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
 				<sc:spiderChart xmlns:sc="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
 					<sc:chartSettings isShowLegend="false">
@@ -209,6 +218,14 @@
 					</sc:spiderPlot>
 				</sc:spiderChart>
 			</componentElement>
+			<line>
+				<reportElement x="297" y="8" width="1" height="468" uuid="ed9d74bb-41d8-4385-b17a-dc99cc4e4ad6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="24" y="243" width="546" height="1" uuid="a3e6d5f9-26f1-4cfa-a058-9eae1fb8c305"/>
+			</line>
 		</band>
 		<band height="52">
 			<printWhenExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()==1)]]></printWhenExpression>
