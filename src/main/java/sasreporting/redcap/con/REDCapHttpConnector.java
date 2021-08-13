@@ -171,9 +171,7 @@ public class REDCapHttpConnector {
 		}
 		
 		logger.info("Getting record input stream...");
-				
 		HttpResponse response = getREDCapHttpResponse(params);
-	
 		return response.getEntity().getContent();
 	}
 	
@@ -239,9 +237,7 @@ public class REDCapHttpConnector {
 		
 		request.setEntity(new UrlEncodedFormEntity(params));
 		response = client.execute(request);
-		
 		request.completed();
-		
 		return response;
 	}
 	

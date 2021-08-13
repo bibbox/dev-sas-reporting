@@ -32,6 +32,9 @@ import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperPrint;
 
+import java.io.OutputStream;
+import java.io.FileOutputStream;
+
 
 public class REDCapSPARKService {
 
@@ -78,7 +81,6 @@ public class REDCapSPARKService {
 		logger.info("Starting REDCap listener");
 		
 		try {
-			
 			mailConf = new Properties();
 			mailConf.load(new FileReader(REDCapSPARKService.PROPERTIES_FILE_MAIL));
 			
@@ -88,7 +90,6 @@ public class REDCapSPARKService {
 			before((request, response) -> {
 
 				try {
-
 					Map<String, String[]> queryMap = request.queryMap().toMap();
 
 					String url = serviceConf.getProperty(REDCapHttpConnector.FIELD_URL);
@@ -96,8 +97,8 @@ public class REDCapSPARKService {
 					boolean authenticated = (queryMap.get(REDCapSPARKService.REDCAP_FIELD_URL) != null && url.startsWith(queryMap.get(REDCapSPARKService.REDCAP_FIELD_URL)[0]));
 
 					if (!authenticated) {
-
 						halt(401, "Invalid REDCap service");
+
 					}
 				} catch (Exception e) {
 
@@ -222,7 +223,14 @@ public class REDCapSPARKService {
 		JasperPrint jp = compiler.getReportFromJRXML(record, jrxmlTemplate);
 	
 		jrxmlTemplate.close();
-		
+
+		///Test save report
+		OutputStream output = new FileOutputStream(new File("test_output/Report.pdf"));
+		JasperExportManager.exportReportToPdfStream(jp, output);
+		//output = new FileOutputStream(new File("test_output/Report.jrxml"));
+		JasperExportManager.exportReportToXmlFile(jp ,  "test_output/Report.jrxml",false);
+		///
+
 		String reportName = FilenameUtils.removeExtension((new File(jrxmlTemplatePath).getName()));
 		
 		String cc = "";
