@@ -791,6 +791,21 @@
 17/Jun/2021 14:26:36,481- REDCapMailClient: PDF attached, sending report
 17/Jun/2021 14:26:38,331- REDCapMailClient: PDF report sent to: robert.reihs@medunigraz.at
 17/Jun/2021 14:26:38,331- REDCapSPARKService: <873343166.3.1623932796484.JavaMail.reihsr@reihsr-XPS-15-9560>
+09/Aug/2021 13:14:46,609- REDCapSPARKService: Starting REDCap listener
+09/Aug/2021 13:15:13,069- REDCapSPARKService: Incoming event:
+
+09/Aug/2021 13:15:13,070- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+09/Aug/2021 13:15:13,076- REDCapHttpConnector: Getting record input stream...
+09/Aug/2021 13:15:13,763- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+09/Aug/2021 13:15:13,764- REDCapSPARKService: Project ID: 15, Record ID: 2
+09/Aug/2021 13:15:13,764- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+09/Aug/2021 13:15:13,764- REDCapSPARKService: Mail path: config/mails/mail.txt
+09/Aug/2021 13:15:13,764- REDCapHttpConnector: Getting record input stream...
+09/Aug/2021 13:15:16,539- REDCapSPARKService: CC Address: bettina.kipperer@medunigraz.at
+09/Aug/2021 13:15:16,949- REDCapMailClient: Validation finished
+09/Aug/2021 13:15:16,959- REDCapMailClient: PDF attached, sending report
+09/Aug/2021 13:15:18,798- REDCapMailClient: PDF report sent to: robert.reihs@medunigraz.at
+09/Aug/2021 13:15:18,799- REDCapSPARKService: <706718503.1.1628507716977.JavaMail.reihsr@reihsr-XPS-15-9560>
 10/Aug/2021 10:52:52,035- REDCapSPARKService: Starting REDCap listener
 10/Aug/2021 10:53:24,581- REDCapSPARKService: null
 10/Aug/2021 10:53:28,605- REDCapSPARKService: null
