@@ -15447,3 +15447,14 @@ REUSABLE_Category
 13/Aug/2021 11:01:51,489- REDCapMailClient: Validation finished
 13/Aug/2021 11:01:51,489- REDCapMailClient: PDF attached, sending report
 13/Aug/2021 11:01:51,529- REDCapSPARKService: Sending the email to the following server failed : smtp.gmail.com:465
+16/Aug/2021 13:55:27,793- REDCapSPARKService: Starting REDCap listener
+16/Aug/2021 13:55:32,599- REDCapSPARKService: Incoming event:
+
+16/Aug/2021 13:55:32,599- REDCapSPARKService: REDCap Url: https://heap.bibbox.org/
+16/Aug/2021 13:55:32,609- REDCapHttpConnector: Getting record input stream...
+16/Aug/2021 13:55:33,260- REDCapSPARKService: Sending email to: robert.reihs@medunigraz.at CC enabled: true
+16/Aug/2021 13:55:33,260- REDCapSPARKService: Project ID: 15, Record ID: 2
+16/Aug/2021 13:55:33,260- REDCapSPARKService: JRXML template path: config/templates/Self-Assessment-Tool.jrxml
+16/Aug/2021 13:55:33,260- REDCapSPARKService: Mail path: config/mails/mail.txt
+16/Aug/2021 13:55:33,261- REDCapHttpConnector: Getting record input stream...
+16/Aug/2021 13:55:37,099- REDCapSPARKService: test_output/Report.pdf (No such file or directory)

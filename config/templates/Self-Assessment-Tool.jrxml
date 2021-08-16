@@ -68,7 +68,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
 					<font size="14" isPdfEmbedded="true"/>
 				</textElement>
-				<text><![CDATA[<font size='4' color='#004280'><b>REPORT</b></font><br><font size='2' color='#004280'>SELF-ASSESSMENT SURVEY<br><font size='1' color='#004280'>Self-Assessment-Tool</font>]]></text>
+				<text><![CDATA[<font size='4' color='#004280'><b>FAIR Data REPORT</b></font><br><font size='2' color='#004280'>FAIR Data SELF-ASSESSMENT SURVEY<br><font size='1' color='#004280'>FAIR Data Self-Assessment-Tool</font>]]></text>
 			</staticText>
 		</band>
 	</pageHeader>
@@ -4257,7 +4257,7 @@
 				<textElement verticalAlignment="Top" markup="html">
 					<font size="8" isPdfEmbedded="true"/>
 				</textElement>
-				<text><![CDATA[&emsp;Document title: BBMRI-ERIC SAS for CEN/TS 16835-1:2015<br>&emsp;Version number: v02, 2018-06-29<br>&emsp;Created by: Sabrina Neururer, BBMRI.at<br>&emsp;Approved by: Andrea Wutte, BBMRI-ERIC]]></text>
+				<text><![CDATA[&emsp;Document title: FAIR Data Report for human exposome<br>&emsp;Version number: v01, 2020-08-16<br>&emsp;Created by: Bettina Kipperer, Medical University of Graz<br>&emsp;Approved by: HEAP-Consortium]]></text>
 			</staticText>
 		</band>
 	</pageFooter>
