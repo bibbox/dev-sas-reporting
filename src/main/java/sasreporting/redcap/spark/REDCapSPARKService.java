@@ -225,10 +225,10 @@ public class REDCapSPARKService {
 		jrxmlTemplate.close();
 
 		///Test save report
-		OutputStream output = new FileOutputStream(new File("test_output/Report.pdf"));
-		JasperExportManager.exportReportToPdfStream(jp, output);
+		//OutputStream output = new FileOutputStream(new File("test_output/Report.pdf"));
+		//JasperExportManager.exportReportToPdfStream(jp, output);
 		//output = new FileOutputStream(new File("test_output/Report.jrxml"));
-		JasperExportManager.exportReportToXmlFile(jp ,  "test_output/Report.jrxml",false);
+		//JasperExportManager.exportReportToXmlFile(jp ,  "test_output/Report.jrxml",false);
 		///
 
 		String reportName = FilenameUtils.removeExtension((new File(jrxmlTemplatePath).getName()));
