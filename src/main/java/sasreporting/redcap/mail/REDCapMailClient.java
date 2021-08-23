@@ -1,11 +1,6 @@
 package sasreporting.redcap.mail;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.Properties;
 
 import org.apache.commons.mail.ByteArrayDataSource;
@@ -15,6 +10,12 @@ import org.apache.commons.mail.HtmlEmail;
 import org.apache.commons.validator.routines.EmailValidator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
 
 
 public class REDCapMailClient {
@@ -83,7 +84,12 @@ public class REDCapMailClient {
 	
 	
 	public String sendMailWithREDCapRecordAttachement(String to, String cc, InputStream attachment, String attachmentName, String subject, String message) throws EmailException, FileNotFoundException, IOException {
-		
+
+		MailTest mt = new MailTest();
+		mt.sendMailTest2(to, cc, attachment, attachmentName, subject, message);
+
+		System.setProperty("mail.smtp.ssl.protocols", "TLSv1.2");
+
 		HtmlEmail email = new HtmlEmail();
 		email.setHostName(mailConf.getProperty(MAIL_SERVER));
 		email.setFrom(mailConf.getProperty(MAIL_SENDER));
@@ -109,9 +115,8 @@ public class REDCapMailClient {
 		email.setSSL(Boolean.parseBoolean(mailConf.getProperty(MAIL_SSL)));
 		email.setSslSmtpPort(mailConf.getProperty(MAIL_PORT_SSL));
 		email.setSmtpPort(Integer.parseInt(mailConf.getProperty(MAIL_PORT_SSL)));
-
 		email.setTLS(Boolean.parseBoolean(mailConf.getProperty(MAIL_TLS)));
-		email.setDebug(false);
+		email.setDebug(true);
 		email.setCharset(mailConf.getProperty(MAIL_CHARSET));
 		email.attach(new ByteArrayDataSource(attachment, "application/pdf"),
 				attachmentName + ".pdf", attachmentName,
@@ -124,4 +129,6 @@ public class REDCapMailClient {
 		
 		return sent;
 	}
+
+
 }
