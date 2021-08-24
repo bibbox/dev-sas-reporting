@@ -85,9 +85,6 @@ public class REDCapMailClient {
 	
 	public String sendMailWithREDCapRecordAttachement(String to, String cc, InputStream attachment, String attachmentName, String subject, String message) throws EmailException, FileNotFoundException, IOException {
 
-		MailTest mt = new MailTest();
-		mt.sendMailTest2(to, cc, attachment, attachmentName, subject, message);
-
 		System.setProperty("mail.smtp.ssl.protocols", "TLSv1.2");
 
 		HtmlEmail email = new HtmlEmail();
