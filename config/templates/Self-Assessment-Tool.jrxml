@@ -5893,11 +5893,11 @@ any further questions, please contact Bettina Kipperer (<a href= "mailto:bettina
 				</textField>
 			</frame>
 			<staticText>
-				<reportElement positionType="Float" x="25" y="60" width="272" height="83" forecolor="#FFFFFF" uuid="60a23fb4-2750-42b2-819f-f42e4d8995b6"/>
+				<reportElement positionType="Float" x="25" y="60" width="475" height="83" forecolor="#FFFFFF" uuid="60a23fb4-2750-42b2-819f-f42e4d8995b6"/>
 				<textElement verticalAlignment="Top" markup="html">
-					<font size="8" isPdfEmbedded="true"/>
+					<font size="8" isItalic="false" isPdfEmbedded="true"/>
 				</textElement>
-				<text><![CDATA[&emsp;Document title: FAIR Data Report for human exposome<br>&emsp;Version number: v01.2.2, 2021-10-08<br>&emsp;Contact: Bettina Kipperer, Medical University of Graz<br>&emsp;Approved by: HEAP-Consortium]]></text>
+				<text><![CDATA[&emsp;Document title: FAIR Data Report for human exposome<br>&emsp;Version number: v01.2.2, 2021-10-08<br>&emsp;Contact: Bettina Kipperer, Medical University of Graz<br>&emsp;Approved by: HEAP-Consortium<br> Based on: <a href="https://www.rd-alliance.org/groups/fair-data-maturity-model-wg">RDA FAIR Data Maturity Model Working Group. (2020)</a>. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FAIR Data Maturity Model: specification and guidelines. <i>Res. Data Alliance</i>, 2019-2020.]]></text>
 			</staticText>
 		</band>
 	</pageFooter>
