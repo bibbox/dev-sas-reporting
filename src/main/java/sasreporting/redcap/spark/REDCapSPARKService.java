@@ -144,6 +144,10 @@ public class REDCapSPARKService {
 
 							CSVRecord record = mainInfRecords.get(0);
 
+							if( "[not completed]".equals(record.get("selfassessmenttool_timestamp"))){
+								logger.info("Survey not completed");
+								halt(401, "Survey not completed");
+							}
 							String to = record.get(csvpHeader.get(serviceConf.getProperty(REDCapSPARKService.FIELD_SERVICE_MAIL)));
 
 							String ericSubmitField = record.get(csvpHeader.get(serviceConf.getProperty(REDCapSPARKService.FIELD_SERVICE_CC)));

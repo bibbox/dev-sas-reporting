@@ -38,6 +38,7 @@ public class REDCapHttpConnector {
 	public final static String FIELD_RAW_OR_LABEL = "rawOrLabel";
 	public final static String FIELD_RAW_OR_LABEL_HEADERS = "rawOrLabelHeaders";
 	public final static String FIELD_EXPORT_CHECKBOX_LABEL = "exportCheckboxLabel";
+	public final static String FIELD_EXPORT_SURVEY_FIELDS = "exportSurveyFields";
 	public final static String FIELD_RECORDS = "records";
 	public final static String FIELD_FIELDS = "fields";
 	
@@ -159,7 +160,8 @@ public class REDCapHttpConnector {
 		params.add(new BasicNameValuePair(FIELD_RAW_OR_LABEL, "label"));
 		params.add(new BasicNameValuePair(FIELD_RAW_OR_LABEL_HEADERS, "raw"));
 		params.add(new BasicNameValuePair(FIELD_EXPORT_CHECKBOX_LABEL, "true"));
-		
+		params.add(new BasicNameValuePair(FIELD_EXPORT_SURVEY_FIELDS, "true"));
+
 		if(recordIDs != null && !("".equals(recordIDs))) {
 			
 			params.add(new BasicNameValuePair(FIELD_RECORDS, recordIDs));
