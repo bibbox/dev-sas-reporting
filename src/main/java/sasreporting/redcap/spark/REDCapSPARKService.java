@@ -143,8 +143,8 @@ public class REDCapSPARKService {
 						if(mainInfRecords.size() > 0) {
 
 							CSVRecord record = mainInfRecords.get(0);
-
-							if( "[not completed]".equals(record.get("selfassessmenttool_timestamp"))){
+							String completed_ts = record.get("selfassessmenttool_timestamp");
+							if( completed_ts == null || "".equals(completed_ts) || "[not completed]".equals(completed_ts) ){
 								logger.info("Survey not completed");
 								halt(401, "Survey not completed");
 							}
