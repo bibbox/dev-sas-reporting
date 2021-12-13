@@ -5,6 +5,7 @@ import java.util.*;
 
 import javax.swing.table.DefaultTableModel;
 
+import net.sf.jasperreports.engine.*;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
@@ -12,15 +13,10 @@ import org.apache.commons.lang.math.NumberUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import net.sf.jasperreports.engine.JRException;
-import net.sf.jasperreports.engine.JRPrintPage;
-import net.sf.jasperreports.engine.JasperCompileManager;
-import net.sf.jasperreports.engine.JasperExportManager;
-import net.sf.jasperreports.engine.JasperFillManager;
-import net.sf.jasperreports.engine.JasperPrint;
-import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.data.JRTableModelDataSource;
 import net.sf.jasperreports.view.JasperViewer;
+
+import net.sf.jasperreports.engine.design.JRDesignField;
 
 
 public class REDCapJRXMLTemplateCompiler {
@@ -204,7 +200,7 @@ public class REDCapJRXMLTemplateCompiler {
 
 		JRTableModelDataSource[] records = readRecordCSV(csvSrc);
 		JasperPrint firstPrint;
-		
+
 		if(records.length > 0) {
 
 			firstPrint = JasperFillManager.fillReport(jr, new HashMap<String, Object>(), records[0]);
@@ -215,7 +211,28 @@ public class REDCapJRXMLTemplateCompiler {
 			firstPrint.setBottomMargin(PAGE_MARGIN);
 			firstPrint.setLeftMargin(PAGE_MARGIN);
 			firstPrint.setRightMargin(PAGE_MARGIN);
-		    
+
+			//Add properties to use in file name
+			records[0].moveFirst();
+			JRDesignField cohort_field = new JRDesignField();
+			cohort_field.setName("cohort_id");
+			JRDesignField timestamp_field = new JRDesignField();
+			timestamp_field.setName("selfassessmenttool_timestamp");
+
+			String cohort_id=null;
+			String date=null;
+			while (cohort_id == null && date==null && records[0].next()){
+				if(cohort_id == null){
+					cohort_id=records[0].getFieldValue( cohort_field).toString();
+				}
+				if(date==null){
+					date = records[0].getFieldValue( timestamp_field).toString().substring(0,10); //Only select date
+				}
+			}
+			firstPrint.setProperty("cohort_id",cohort_id);
+			firstPrint.setProperty("date",date);
+
+
 			for(int j=1; j<records.length; j++) {
 
 				JasperPrint jasperPrint = JasperFillManager.fillReport(jr, new HashMap<String, Object>(), records[j]);
@@ -233,6 +250,8 @@ public class REDCapJRXMLTemplateCompiler {
 					JRPrintPage object = (JRPrintPage)pages.get(i);
 					firstPrint.addPage(object);
 				}
+
+
 			}
 		}
 		

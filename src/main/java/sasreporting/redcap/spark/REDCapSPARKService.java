@@ -2,14 +2,7 @@ package sasreporting.redcap.spark;
 
 import static spark.Spark.*;
 
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
@@ -17,6 +10,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.data.JRTableModelDataSource;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
@@ -28,12 +23,8 @@ import org.apache.logging.log4j.Logger;
 import sasreporting.redcap.con.REDCapHttpConnector;
 import sasreporting.redcap.jasper.REDCapJRXMLTemplateCompiler;
 import sasreporting.redcap.mail.REDCapMailClient;
-import net.sf.jasperreports.engine.JRException;
-import net.sf.jasperreports.engine.JasperExportManager;
-import net.sf.jasperreports.engine.JasperPrint;
 
-import java.io.OutputStream;
-import java.io.FileOutputStream;
+import net.sf.jasperreports.engine.design.JRDesignField;
 
 
 public class REDCapSPARKService {
@@ -223,7 +214,7 @@ public class REDCapSPARKService {
 		FileInputStream jrxmlTemplate = new FileInputStream(jrxmlTemplatePath);
 		
 		REDCapJRXMLTemplateCompiler compiler = new REDCapJRXMLTemplateCompiler();
-		
+
 		JasperPrint jp = compiler.getReportFromJRXML(record, jrxmlTemplate);
 	
 		jrxmlTemplate.close();
@@ -235,8 +226,10 @@ public class REDCapSPARKService {
 		//JasperExportManager.exportReportToXmlFile(jp ,  "test_output/Report.jrxml",false);
 		///
 
-		String reportName = FilenameUtils.removeExtension((new File(jrxmlTemplatePath).getName()));
-		
+		//String reportName = FilenameUtils.removeExtension((new File(jrxmlTemplatePath).getName()));
+		String reportName = "Report - FAIR Data Self-Assessment-Service - "+jp.getProperty("date")+" - "+jp.getProperty("cohort_id");
+
+
 		String cc = "";
 		
 		if(ccEnabled) {

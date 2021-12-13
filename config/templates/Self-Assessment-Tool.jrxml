@@ -72,7 +72,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
 					<font size="14" isPdfEmbedded="true"/>
 				</textElement>
-				<text><![CDATA[<font size='6' color='#FFFFFF'><b>FAIR Data Report</b></font><br><font size='4' color='#FFFFFF'>FAIR Data Self-Assessment-Service]]></text>
+				<text><![CDATA[<font size='6' color='#FFFFFF'><b>Report</b></font><br><font size='4' color='#FFFFFF'>FAIR Data Self-Assessment-Service]]></text>
 			</staticText>
 		</band>
 	</pageHeader>
@@ -5897,7 +5897,7 @@ any further questions, please contact Bettina Kipperer (<a href= "mailto:bettina
 				<textElement verticalAlignment="Top" markup="html">
 					<font size="8" isItalic="false" isPdfEmbedded="true"/>
 				</textElement>
-				<text><![CDATA[&emsp;Document title: FAIR Data Report for human exposome<br>&emsp;Version number: v01.2.2, 2021-10-08<br>&emsp;Contact: Bettina Kipperer, Medical University of Graz<br>&emsp;Approved by: HEAP-Consortium<br> Based on: <a href="https://www.rd-alliance.org/groups/fair-data-maturity-model-wg">RDA FAIR Data Maturity Model Working Group. (2020)</a>. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FAIR Data Maturity Model: specification and guidelines. <i>Res. Data Alliance</i>, 2019-2020.]]></text>
+				<text><![CDATA[&emsp;FAIR Data Report<br>&emsp;Version number: v01.2.3, 2021-12-10<br>&emsp;Contact: Bettina Kipperer, Medical University of Graz<br>&emsp;Approved by: HEAP-Consortium<br> Based on: <a href="https://www.rd-alliance.org/groups/fair-data-maturity-model-wg">RDA FAIR Data Maturity Model Working Group. (2020)</a>. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FAIR Data Maturity Model: specification and guidelines. <i>Res. Data Alliance</i>, 2019-2020.]]></text>
 			</staticText>
 		</band>
 	</pageFooter>
