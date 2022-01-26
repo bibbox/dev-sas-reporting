@@ -54,7 +54,8 @@ public class REDCapSPARKService {
 	public static final String SUBMIT_INTERNAL_ERIC = "Generate report and submit results to HEAP";//Generate report and submit results to BBMRI-ERIC";
 	
 	private static Properties mailConf, serviceConf;
-	
+
+	private String REPORT_PREFIX = "Report - HEAP FAIR Data Self-Assessment-Service";
 	
 	public REDCapSPARKService() {
 		
@@ -70,7 +71,13 @@ public class REDCapSPARKService {
 	public void init() {
 		
 		logger.info("Starting REDCap listener");
-		
+
+		report_file_prefix=System.getenv("REPORT_PREFIX");
+		// if ENV: REPORT_PREFIX is set use it
+		if (report_file_prefix != null) {
+			REPORT_PREFIX = report_file_prefix;
+		}
+
 		try {
 			mailConf = new Properties();
 			mailConf.load(new FileReader(REDCapSPARKService.PROPERTIES_FILE_MAIL));
@@ -227,7 +234,7 @@ public class REDCapSPARKService {
 		///
 
 		//String reportName = FilenameUtils.removeExtension((new File(jrxmlTemplatePath).getName()));
-		String reportName = "Report - FAIR Data Self-Assessment-Service - "+jp.getProperty("date")+" - "+jp.getProperty("cohort_id");
+		String reportName = REPORT_PREFIX + " - "+jp.getProperty("date")+" - "+jp.getProperty("cohort_id");
 
 
 		String cc = "";
