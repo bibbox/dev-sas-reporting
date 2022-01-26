@@ -72,7 +72,7 @@ public class REDCapSPARKService {
 		
 		logger.info("Starting REDCap listener");
 
-		report_file_prefix=System.getenv("REPORT_PREFIX");
+		String report_file_prefix=System.getenv("REPORT_PREFIX");
 		// if ENV: REPORT_PREFIX is set use it
 		if (report_file_prefix != null) {
 			REPORT_PREFIX = report_file_prefix;
