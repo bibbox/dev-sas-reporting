@@ -111,6 +111,11 @@ public class REDCapMailClient {
 	public String sendMailWithREDCapRecordAttachement(String to, String cc, InputStream attachment, String attachmentName, String subject, String message) throws EmailException, FileNotFoundException, IOException {
 		// Follow instruction in video: https://www.youtube.com/watch?v=-rcRf7yswfM to enable token generation for scope gmail
 		String accessToken = "";
+		EmailValidator ev = EmailValidator.getInstance();
+		if(to == null || "".equals(to) || !ev.isValid(to)) {
+			return MSG_INVALID_TO;
+		}
+
 		String request = "client_id=" + URLEncoder.encode(mailConf.getProperty(OAUTH_CLIENT_ID), "UTF-8")
 				+ "&client_secret=" + URLEncoder.encode(mailConf.getProperty(OAUTH_CLIENT_SECRET), "UTF-8")
 				+ "&refresh_token=" + URLEncoder.encode(mailConf.getProperty(OAUTH_REFRESH_TOKEN), "UTF-8")
@@ -150,6 +155,11 @@ public class REDCapMailClient {
 			Message msg = new MimeMessage(session);
 			msg.setFrom(new InternetAddress(mailConf.getProperty(MAIL_SENDER)));
 			msg.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+			if(cc != null && !("".equals(cc)) && ev.isValid(cc)) {
+				msg.addRecipient(MimeMessage.RecipientType.CC, new InternetAddress(
+						cc));
+			}
+
 			msg.setSubject(subject);
 			msg.setSentDate(new Date());
 
