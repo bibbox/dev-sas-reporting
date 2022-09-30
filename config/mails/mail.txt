@@ -2,26 +2,18 @@ Dear participant,
 
  
 
-Thank you for completing the BBMRI-ERIC self assessment questionnaire on the conformity assessment with the respective purpose of CEN / TS of your pre-analytical sample preparation.
+Thank you for completing the HEAP FAIR data self assessment questionnaire to make data Findable, Accessible, Interoperable and Reusable (FAIR) for the scientific community.
 
- 
+The Self Assessment Service statements are based on the FAIR Data Maturity Model, Specification and Guidelines 2020 from the Research Data Alliance.
 
+We will provide a visual summary of your data collection’s “FAIRness level”, showing how well your data and data management practice performs under each FAIR (Findable, Accessible, Interoperable and Reusable) category, and highlighting any areas covered in the assessment that need further work.
 You will find in the appendix the resulting report, which you can use for your own quality management files as documentation information and as basis for improvement strategies.
 
- 
+For further information about the Self Assessment Service, please contact Bettina Kipperer (bettina.kipperer@medunigraz.at).
 
-The evaluation of the self-assessment survey is based on the specifications of the respective CEN/TS. According to CEN and ISO standards "shall" means a requirement to be fulfilled and "should" a recommendation to meet the respective requirement in the standard, in order to ensure the sample quality for the respective intended use.
 
- 
 
-If your report indicates that the pre-analytical sample processing complies with the standard, then you can send the report together with your signed compliance statement to BBMRI-ERIC (andrea.wutte@bbmri-eric.eu).
-
- 
-
-The addressed sample collection will be displayed in the BBMRI-ERIC Directory. This quality assurance seal is intended to enhance visibility of quality-assessed samples, which are available for pan-European scientific developments.
-
- 
 
 Best regards
 
-BBMRI-ERIC QM Department
+HEAP WP7
